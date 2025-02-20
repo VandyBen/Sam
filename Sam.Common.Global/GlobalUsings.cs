@@ -4,3 +4,6 @@ global using System.Linq.Expressions;
 global using System.Reflection;
 global using System.Text;
 global using Newtonsoft.Json;
+global using System.ComponentModel.DataAnnotations;
+global using Microsoft.Extensions.Configuration;
+global using System.DirectoryServices;
