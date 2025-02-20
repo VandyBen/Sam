@@ -1,0 +1,1837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore context-namespace="Sam.DataModel" namespace="Sam.DataModel" p1:name="SamContext" p1:Guid="8472473d-d047-4a58-93ca-c02d6d0e434b" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Application" entity-set="Applications" table="Application" schema="dbo" p1:Guid="8fec5ade-5dd1-4423-9bf2-da13776232d0">
+    <composite-id>
+      <key-property name="ApplicationId" type="Guid" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="0aeab8d6-a65f-4695-975e-832a4610abbf">
+        <column name="ApplicationId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+      </key-property>
+      <key-property name="ListId" type="Int32" p1:inheritance-modifier="Virtual" primary-key-index="1" p1:ValidateRequired="true" p1:Guid="4460aa4f-f898-41b6-bf1a-a72152db4d3e">
+        <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="PersonId" type="Guid" p1:inheritance-modifier="Virtual" primary-key-index="2" p1:ValidateRequired="true" p1:Guid="d187bca1-e5e6-4891-9bf6-03070fd94ce4">
+        <column name="PersonId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+      </key-property>
+    </composite-id>
+    <property name="ApplicationUpdate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4c19e268-072f-4fcb-a853-4d67e96666bd">
+      <column name="ApplicationUpdate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="PsAdmApplNbr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="ab37b877-9dab-41fc-a1c6-c540b638b41a">
+      <column name="PsAdmApplNbr" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Career" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="0b321c24-89c1-447a-b972-0269b87bb27d">
+      <column name="Career" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="RoundKey" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="70f62587-11cc-40de-a1d1-54cac024ebec">
+      <column name="RoundKey" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="AdmitType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="c18c050b-95df-4567-9c00-2ceba65421e1">
+      <column name="AdmitType" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ApplicationAdmitTerm" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="76cb9779-dd67-4550-897e-213a9fed98ce">
+      <column name="ApplicationAdmitTerm" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SatAdmissionsScore" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="24a203ef-60e4-4475-aea3-54f61ed5eafd">
+      <column name="SatAdmissionsScore" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="TestType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="33ab816e-8a02-4c05-9ba5-0729a9de5db5">
+      <column name="TestType" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="TestUpdate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="35d4e740-a0dc-446a-be8c-2f903128e1d3">
+      <column name="TestUpdate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="SatHighestVerifiedMaxCriticalReading" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="92a71978-8bf3-437d-8627-8300fcdc03fa">
+      <column name="SatHighestVerifiedMaxCriticalReading" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SatHighestVerifiedMaxMath" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1f75e55d-fb73-4351-a584-eb63cb7436c3">
+      <column name="SatHighestVerifiedMaxMath" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SatrAdmissionsScore" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="def77984-ddb2-46a1-96d3-c3dcabd2f13c">
+      <column name="SatrAdmissionsScore" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SatrHighestVerifiedMaxErw" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="148a603a-c05c-49b6-9f15-f416efde140e">
+      <column name="SatrHighestVerifiedMaxErw" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SatrHighestVerifiedMaxMath" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="64f30d06-c306-4048-8816-0f294b9fbe6b">
+      <column name="SatrHighestVerifiedMaxMath" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ActHighestVerifiedTotalEnglish" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b1c62e6f-91e4-4b13-a2ca-e10eafc80044">
+      <column name="ActHighestVerifiedTotalEnglish" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ActHighestVerifiedTotalMath" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f4194c87-c523-4b05-aeb1-69365d157034">
+      <column name="ActHighestVerifiedTotalMath" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="RIC" type="Decimal" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1ae17300-00fa-4e58-8fb2-e5f3809bcb3d">
+      <column name="RIC" not-null="False" precision="10" scale="7" sql-type="decimal" p1:unicode="False" />
+    </property>
+    <property name="ERIC" type="Decimal" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4aa64c75-79bd-4e57-84b2-c638e760125d">
+      <column name="ERIC" not-null="False" precision="10" scale="7" sql-type="decimal" p1:unicode="False" />
+    </property>
+    <property name="DecisionUpdate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b7d452e7-eb06-47b8-8fec-1527652b129d">
+      <column name="DecisionUpdate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="DecisionConfirmedDescription" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="fe009f1b-6df5-4899-8069-34673d60d710">
+      <column name="DecisionConfirmedDescription" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DecisionConfirmedExport3Code" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="486ea9e5-20ab-4181-b8b8-ac8af48ac824">
+      <column name="DecisionConfirmedExport3Code" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DecisionConfirmedCode" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="5570b867-853d-47d6-817e-755b308c95be">
+      <column name="DecisionConfirmedCode" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DecisionConfirmedReasonDescription" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="4422a23a-a9b3-4882-8635-65c38a4928c2">
+      <column name="DecisionConfirmedReasonDescription" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DecisionConfirmedReasonExportKey" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="a6ea2076-91dd-4c88-8e31-3fdef55d7dac">
+      <column name="DecisionConfirmedReasonExportKey" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SchoolUpdate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="be716c6b-a1ac-4f01-a6e1-f7e7ed1b0f13">
+      <column name="SchoolUpdate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="HsgpaCalculated" type="Decimal" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d2902ef1-493b-4976-8861-ed74ad1b8599">
+      <column name="HsgpaCalculated" not-null="False" precision="10" scale="7" sql-type="decimal" p1:unicode="False" />
+    </property>
+    <property name="LatestEvaluation" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="18" p1:ValidateRequired="false" p1:Guid="9f656f0c-3a70-4db2-9e19-83b5b60e1133">
+      <column name="LatestEvaluation" not-null="False" length="18" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="EvaluationStatus" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="82adc828-3b9e-47f6-a632-d4e2f71c604f">
+      <column name="EvaluationStatus" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="EvalStatusDescr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="a6a10e18-6452-4637-b197-b101d05210f0">
+      <column name="EvalStatusDescr" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Ar" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="8d13ce5f-e3d9-4224-8209-7b129c553bde">
+      <column name="Ar" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ArVal" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e8c4ac04-50ee-4437-b391-1708d95ce557">
+      <column name="ArVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Pr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="bdc033f6-2cae-4892-b1f0-9724c316f026">
+      <column name="Pr" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="PrVal" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9951cf93-e6f9-4ee1-ac32-a215fbee46f9">
+      <column name="PrVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Sf" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="f89cb826-8f43-48e4-890b-6cece5f8a07e">
+      <column name="Sf" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SfVal" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="24d3cdc3-693d-41d6-9671-6ccd8725e417">
+      <column name="SfVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Ovr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="9f3eca37-fb37-46de-ad58-121ec6bb6206">
+      <column name="Ovr" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="OvrVal" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2e49da12-3a12-4f9d-b601-ad35ee17a5e5">
+      <column name="OvrVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="OuaGeoMarket" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="f02b8762-07ce-4271-8a8c-8364282902c8">
+      <column name="OuaGeoMarket" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="OuaRegion" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="79c8c421-4a75-4189-bfe4-6aa56eb62609">
+      <column name="OuaRegion" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="StaffAssigned" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="01b0dde3-18fc-4bac-bac7-a709cf5c9580">
+      <column name="StaffAssigned" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="EtsCode" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="845bf58f-648a-459c-8032-e8bfa0bff81a">
+      <column name="EtsCode" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HsState" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="919e35f3-b964-46fe-a7ed-d467fbcc67b5">
+      <column name="HsState" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HsName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="5b92a73e-9e40-48a4-9818-d1196dbc31de">
+      <column name="HsName" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HsRating" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="4" p1:ValidateRequired="false" p1:Guid="8b9332e9-d704-4d54-8630-42133d51acf3">
+      <column name="HsRating" not-null="False" length="4" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SchoolOfChoice1" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="63b70d28-0437-493e-a010-5e05572c06c1">
+      <column name="SchoolOfChoice1" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SchoolOfChoice1Descr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="91d62b27-6a42-40d2-bde5-d028d547e953">
+      <column name="SchoolOfChoice1Descr" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="School1Major1" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="d17768c8-17aa-4fc8-9009-57103ed65f7b">
+      <column name="School1Major1" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="School1Major1Descr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="fe369f1d-72ff-4a82-84cc-aa130fe6b44c">
+      <column name="School1Major1Descr" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="GpcMajor" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="61cddf14-74d4-4991-a7c3-351565088728">
+      <column name="GpcMajor" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FinancialAidInterest" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="033a8077-c1d1-4b10-a651-bdc4f310690e">
+      <column name="FinancialAidInterest" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="PellEligible" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2b6ff350-6135-42f5-8b37-85e227aeb47f">
+      <column name="PellEligible" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="FacStaff" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="a19ff271-0844-40e8-9917-dda782f21393">
+      <column name="FacStaff" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="UCode" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="2" p1:ValidateRequired="false" p1:Guid="471b73de-71ef-48e1-bbcc-b5ce2ba31e47">
+      <column name="UCode" not-null="False" length="2" precision="10" scale="0" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Legacy" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="26366e2f-41cc-41c9-b1c3-fcaccdd00b90">
+      <column name="Legacy" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="GiaStatus" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="cd92877b-8636-4d38-a788-9aecb5ad4396">
+      <column name="GiaStatus" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FirstGen" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d02b1f3c-f32a-4183-9a05-882f896a1d0d">
+      <column name="FirstGen" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="Posse" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="559ae14c-d688-4cc6-a07a-dbdd062028be">
+      <column name="Posse" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ChicagoScholar" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="664163c6-c588-446f-9247-7eca9ae44966">
+      <column name="ChicagoScholar" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="QuestBridge" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="874c8bd2-1966-4d75-8114-c763a0262064">
+      <column name="QuestBridge" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Mosaic" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="764b64f7-a310-4547-bfa4-293d9f4a0bf7">
+      <column name="Mosaic" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistActiveDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="56f0004d-3d31-4348-a83c-7c4f664da015">
+      <column name="WaitlistActiveDate" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="WlStrong" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="5dc46d11-ffa5-408e-babc-9caf4018c7bb">
+      <column name="WlStrong" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge1" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cb6a8e77-7dfe-492c-b940-0961cc1f983e">
+      <column name="WaitlistChallenge1" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge2" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e11b1fb7-5477-4eb2-bb1f-1a405c578a28">
+      <column name="WaitlistChallenge2" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge3" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="09641d45-cb71-427e-bc0d-25cf43147e91">
+      <column name="WaitlistChallenge3" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge4" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3c13ea03-9e5d-4cb0-b8a0-d74b4913c298">
+      <column name="WaitlistChallenge4" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge5" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e1e2f325-aef1-4e52-8a1d-7d242834a2f8">
+      <column name="WaitlistChallenge5" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge6" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="75a5ca42-dcc8-4def-a17b-fce5cb7d8a14">
+      <column name="WaitlistChallenge6" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge7" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5e23c31e-7766-4264-bad8-aaa656ec6b93">
+      <column name="WaitlistChallenge7" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge8" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="de17ca8c-1920-47a2-83da-ab3a5d7c050c">
+      <column name="WaitlistChallenge8" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistChallenge9" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="38ce7b3e-7c0b-4e1a-8068-904a54558771">
+      <column name="WaitlistChallenge9" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistPreOffer" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dc199cba-3f47-47f6-91c9-53b336042241">
+      <column name="WaitlistPreOffer" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistPreOfferResponse" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f4df8e89-dbc9-4440-a331-567c86a00a60">
+      <column name="WaitlistPreOfferResponse" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="PersonUpdate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2db19726-d8b9-4a1e-a365-1515e92c9b2e">
+      <column name="PersonUpdate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="SlateRefId" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="33cdd964-a7b4-4420-99b4-337284553469">
+      <column name="SlateRefId" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="EmplId" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="dcf163be-587e-4065-ab02-52760ad91905">
+      <column name="EmplId" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FirstName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="85c70394-4407-4128-84d5-143b9d75953c">
+      <column name="FirstName" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LastName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="7a16ffa4-c8d2-431d-b849-1cdbf4a06959">
+      <column name="LastName" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="MiddleName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="ce26ff2f-e7c2-4c4e-b6a2-4e3f5a97a1f9">
+      <column name="MiddleName" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Sex" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="b3ea6677-4d76-4c5e-a77c-13df1f74cd29">
+      <column name="Sex" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Race" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="3edfd589-3186-4573-8b78-d0eaf73fc229">
+      <column name="Race" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Hispanic" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="7b86c4ca-293a-49dd-add5-fa9d8d6c8ac8">
+      <column name="Hispanic" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="IpedsEthnicCode" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="0fbcad95-c0d9-4003-82bb-62799a57c60d">
+      <column name="IpedsEthnicCode" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="IpedsEthnicDescr" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="aa304810-7f5c-4eda-b385-7d9990cec07b">
+      <column name="IpedsEthnicDescr" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ProtectionId" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c1bcc091-4438-44c6-9082-dcac1e1e5667">
+      <column name="ProtectionId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ActAdmissionsScore" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5affbab1-cfb3-479b-8ad9-020b5136fe84">
+      <column name="ActAdmissionsScore" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SchFreeze" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d2b81b66-3e6a-481a-bb0c-4ff3ed22b081">
+      <column name="SchFreeze" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="ManualFreeze" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e38fff62-2e1e-4187-91d4-cdf66c8af1d7">
+      <column name="ManualFreeze" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="SOC" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6f5b2b5c-f5cc-4872-a92b-aa53bce77798">
+      <column name="SOC" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="CitizenshipStatus" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="5bd8f91b-da99-47ff-b751-6c5b5a8c689b">
+      <column name="CitizenshipStatus" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="PrimaryCitizenshipCountry" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="1cb81c4e-ea7a-4720-a747-2bd8f87b8396">
+      <column name="PrimaryCitizenshipCountry" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SecondaryCitizenshipCountry" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="0e6893fe-6f00-4e27-816f-b84282bdb3cb">
+      <column name="SecondaryCitizenshipCountry" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Active" type="Boolean" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9b014996-db91-44a7-aafb-65598025eaa4">
+      <column name="Active" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="LandscapeLocale" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="8d770fce-1b8f-437c-a157-db6622e976d7">
+      <column name="LandscapeLocale" not-null="False" length="128" precision="0" scale="0" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LandscapeHSNeighborhood" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="41cbbd45-f460-40d4-9901-08de920bf146">
+      <column name="LandscapeHSNeighborhood" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="LandscapeStdntNeighborhood" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2a91f17c-7fdd-471e-bbf8-797bf0a7e4be">
+      <column name="LandscapeStdntNeighborhood" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="DateOfBirth" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8c113275-6db3-4ad6-9bc7-3b0e51754192">
+      <column name="DOB" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="IsTestingSubmitted" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="cb09c3bf-76be-4633-ba7f-e94832a52f8f">
+      <column name="IsTestingSubmitted" default="NULL" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="CourseworkRigor" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="e6332431-0260-4ae3-8d6c-58374c4f6c42">
+      <column name="CourseworkRigor" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="WasEver4Year" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="26501372-37cf-43ea-a854-5281cfa24fd8">
+      <column name="WasEver4Yr" />
+    </property>
+    <property name="HasMultipleColleges" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d348385c-9b53-4a97-a782-37ac4b91e9b3">
+      <column name="HasMultipleColleges" />
+    </property>
+    <property name="NumberOfColleges" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6933fd99-97d9-4cf5-aecc-2a8dbc0a547d">
+      <column name="" />
+    </property>
+    <property name="HasTakenCalculus" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="d3fb92b2-a6ee-47f2-a88d-e1dcb58187c5">
+      <column name="HasTakenCalculus" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HasTakenPhysics" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="9fd430aa-13b1-43e6-80d9-d0a94c51c120">
+      <column name="HasTakenPhysics" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HasTakenChemistry" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="7d814d85-56d5-4547-a0f6-39ae4f1eb54c">
+      <column name="HasTakenChemistry" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CurrentInternationalCollege" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="7bfb1127-574f-4c80-83da-a777e0f33dbe">
+      <column name="CurrentInternationalCollege" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CollegeCredits" type="Decimal" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2b6920df-b94c-4e4f-b1e2-fdca184cb35c">
+      <column name="" />
+    </property>
+    <property name="HighSchoolGradYear" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="59936a9b-ea55-41c1-ba5d-35ca00a58529">
+      <column name="" />
+    </property>
+    <property name="School1Hours" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ee04ce67-4508-4435-b7e9-66587bd39fd4">
+      <column name="" />
+    </property>
+    <property name="School2Hours" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="15aee78f-7e14-444c-a867-f2cbc369c86a">
+      <column name="" />
+    </property>
+    <property name="School3Hours" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9bc13d07-397e-4090-8bdd-e9e6e704fe2a">
+      <column name="" />
+    </property>
+    <property name="School4Hours" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d37ddd16-cb73-48b2-9a1a-3c4f22d31302">
+      <column name="" />
+    </property>
+    <property name="School1HoursType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="4aafea1e-52ca-4173-a807-afdb3255b1fc">
+      <column name="School1HoursType" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="School2HoursType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="043a166f-8dbb-472e-a930-ac272fcce2e0">
+      <column name="School2HoursType" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="School3HoursType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="b88bedc4-c76c-4060-ba88-994a0082e1b5">
+      <column name="School3HoursType" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="School4HoursType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="e98bec5e-6a84-4316-bd8e-d94dd3c06718">
+      <column name="School4HoursType" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="IsDacaUndocumented" type="Boolean" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="a5de4ad7-14f2-433d-bf11-8f784a608ce1">
+      <column name="IsDacaUndocumented" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsAttendingRuralHs" type="Boolean" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="d97d500e-6201-4102-9431-80be46d9f3a2">
+      <column name="IsAttendingRuralHs" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsAttendingKippSchool" type="Boolean" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="41e26e42-1b0e-444e-a030-9db394fd93e9">
+      <column name="IsAttendingKippSchool" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="HasNationalMeritAward" type="Boolean" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="bf0a9626-1dbf-4482-aba7-85071d1cb35e">
+      <column name="HasNationalMeritAward" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsCGradeCollege" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="fa74cdbe-7794-41e2-b986-b2a736c5fa3f">
+      <column name="IsCGradeCollege" default="0" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsCGradeHighSchool" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="3e86bfa8-6ace-431e-acae-5e84da21eb1c">
+      <column name="IsCGradeHighSchool" default="0" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="InstitutionalNeed" type="Decimal" p1:inheritance-modifier="Virtual" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="f4edf700-51eb-4c7f-a5c1-a7a64759b498">
+      <column name="InstitutionalNeed" default="NULL" not-null="False" precision="18" scale="0" sql-type="decimal" p1:unicode="False" />
+    </property>
+    <property name="WaitListStrongDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" value-generated="OnAdd" p1:ValidateRequired="false" p1:Guid="d45c8a20-5fcc-4dd3-8f23-052b5c47782f">
+      <column name="WaitListStrongDate" default="NULL" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="OriginalRoundKey" type="String" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="de660385-6581-4ad0-aeb6-fb15a941ef9b">
+      <column name="OriginalRoundKey" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CorneliusVanderbiltScholarship" type="Boolean" p1:ValidateRequired="true" p1:Guid="490fd121-54ef-47cd-998d-cc17535624eb">
+      <column name="CorneliusVanderbiltScholarship" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IngramScholarship" type="Boolean" p1:ValidateRequired="true" p1:Guid="ddd4810e-a6bf-4375-a906-accc3fae4392">
+      <column name="IngramScholarship" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="ChancellorScholarship" type="Boolean" p1:ValidateRequired="true" p1:Guid="de6858f9-ecd5-40db-9224-f78aad818538">
+      <column name="ChancellorScholarship" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="Vv" type="String" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="8c544336-0f06-4750-a97e-ae616ffd46e2">
+      <column name="Vv" not-null="False" length="8" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="VvVal" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dd1814f5-b0cc-4b5a-90fe-ae72a6c775d9">
+      <column name="" />
+    </property>
+    <property name="ChDiversity" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5a1184a5-d398-4988-bc56-8429a9b1700b">
+      <column name="ChDiversity" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ChBridgingGaps" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="92cab676-d09b-47ae-a636-e5736c08c842">
+      <column name="ChBridgingGaps" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ChLeadership" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3450f526-4ab2-4b54-b20d-fad1837691cc">
+      <column name="ChLeadership" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ChOverall" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7435cab8-d222-49ef-ae28-d4dc70a10769">
+      <column name="ChOverall" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="WaitlistLetter" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bd033e4f-e619-49b5-92cf-64286f0f59f8">
+      <column name="WaitlistLetter" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IntlHighSchool" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4ec4082a-6c81-41c5-8f5d-c2cc34ff4cf5">
+      <column name="IntlHighSchool" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="UwcSchool" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f9983e89-155c-4db8-b109-f8cdae773591">
+      <column name="UwcSchool" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="TitleOneSchool" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d4ae82e5-8b77-41c0-9706-fdc632bedd2b">
+      <column name="TitleOneSchool" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="WaitlistStrongNumber" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fc767c1e-06f6-4c66-a670-466362186a78">
+      <column name="WaitlistStrongNumber" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Cs" type="String" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="92578e84-3f4a-4633-9443-b4e68ccaeb6e">
+      <column name="Cs" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CsVal" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0604da42-a0c5-447b-bcb6-578e003b75e9">
+      <column name="CsVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Lc" type="String" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="6f9995e0-1696-49c2-a1d0-0ec76d96b6d5">
+      <column name="Lc" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LcVal" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="24062dcb-58a4-4699-8e76-4746a84316d2">
+      <column name="LcVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Ub" type="String" p1:nullable="True" p1:ValidateMaxLength="8" p1:ValidateRequired="false" p1:Guid="9c08cc75-a100-49ad-b158-17baeb86d4b4">
+      <column name="Ub" not-null="False" length="8" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="UbVal" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b5d12019-eae0-4f19-be5c-3280676db6ee">
+      <column name="UbVal" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="DG" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d3288687-46b3-4264-b067-a8670ac391da">
+      <column name="DG" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="HSR" type="Double" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d5c36546-5f31-4ef9-9913-dbdf5802a458">
+      <column name="" />
+    </property>
+    <property name="AppComplete" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4c86b79e-32b4-4758-b4a7-38114b55517d">
+      <column name="AppComplete" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="FocusSchool" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="953f618e-ae69-4578-9256-568bfbfe858f">
+      <column name="FocusSchool" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="CustomAttribute" entity-set="CustomAttributes" table="CustomAttribute" schema="dbo" p1:Guid="97e9a490-e512-4de6-8ddd-d1023d170bdc">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="40df125c-439f-4ad8-90dd-5aee1154a359">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="77c1efb0-ca8d-4e39-8188-628ddfbfbd7e">
+      <column name="Name" not-null="True" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CreatedByUserId" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e3e5acc9-2cdf-44d4-9c44-02127c968c9c">
+      <column name="CreatedByUserId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CreatedDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c6147790-c17b-4378-8ccb-3cf4769d92c6">
+      <column name="CreatedDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="DeletedDate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f15cac42-9c36-4e0f-a4ea-4b92917564aa">
+      <column name="" />
+    </property>
+  </class>
+  <class name="List" entity-set="Lists" table="List" schema="dbo" p1:Guid="f533fd1d-b0aa-46aa-a179-cade29f7c612">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="b233dbe4-3573-40ab-b546-82297b0436d4">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="9b395c96-9fa1-4864-9aa1-f387a287b142">
+      <column name="Name" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Cohort" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="2007cca3-3d7d-4d9f-9599-59f92140c826">
+      <column name="Cohort" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="StudentType" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="3ebbf46d-4166-456a-bc8a-3c9a996e5536">
+      <column name="StudentType" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CreateDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="0a9dfaa3-0fea-4e5e-81e8-57023e221d34">
+      <column name="CreateDate" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ModifyDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f5c226f2-2a90-4d0d-8877-07472cf73567">
+      <column name="ModifyDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastRefreshDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="85a437d4-b56e-44e6-84fd-cfbaad76d2ef">
+      <column name="LastRefreshDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="RefreshSuccessful" type="Boolean" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="801e91c0-ac5c-4eed-90fe-f465461c6c3d">
+      <column name="RefreshSuccessful" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="Final" type="Boolean" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="c4b53191-06e8-4fac-9216-aee1620909fe">
+      <column name="Final" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ListAttribute" entity-set="ListAttributes" table="ListAttribute" schema="dbo" p1:Guid="1b4b969a-a8a3-4e10-981c-111b0c03825d">
+    <composite-id>
+      <key-property name="ListId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="4048f9cb-69f7-4321-98b3-98d89851ce87">
+        <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="ApplicationId" type="Guid" p1:inheritance-modifier="Virtual" primary-key-index="1" p1:ValidateRequired="true" p1:Guid="7657af07-e6e2-453a-a061-02011672cf59">
+        <column name="ApplicationId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+      </key-property>
+      <key-property name="PersonId" type="Guid" p1:inheritance-modifier="Virtual" primary-key-index="2" p1:ValidateRequired="true" p1:Guid="d44daf00-728d-424d-9c55-8b7d4d2c6181">
+        <column name="PersonId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+      </key-property>
+      <key-property name="AttributeId" type="Int32" p1:inheritance-modifier="Virtual" primary-key-index="3" p1:ValidateRequired="true" p1:Guid="21f169ee-baf4-4e73-a7d7-4dd9a8957ff0">
+        <column name="AttributeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+    </composite-id>
+    <property name="LastModifyUserId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="0e17b48f-97b2-4455-bf93-c16ee6960090">
+      <column name="LastModifyUserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="LastModifyDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="bfe2cd43-c822-4989-bcd4-9191a9181a08">
+      <column name="LastModifyDate" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ListRole" entity-set="ListRoles" table="ListRole" schema="dbo" p1:Guid="3059e98f-38ce-429b-982a-27dc6de1dd54">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="8ab035b7-e840-48f6-95ae-f89003e71919">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="15854684-bfe1-49d4-a747-2891f812e3eb">
+      <column name="Name" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ListUserRole" entity-set="ListUserRoles" table="ListUserRole" schema="dbo" p1:Guid="4d97a543-1bd5-403b-a34a-13e4c6d795c2">
+    <composite-id>
+      <key-property name="ListId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="23ebd286-6b92-4c2b-8470-51fed55bcf70">
+        <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="UserId" type="Int32" p1:inheritance-modifier="Virtual" primary-key-index="1" p1:ValidateRequired="true" p1:Guid="a88599b7-dd6d-4ccb-8d82-c789e51de83a">
+        <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="ListRoleId" type="Int32" p1:inheritance-modifier="Virtual" primary-key-index="2" p1:ValidateRequired="true" p1:Guid="37fbd748-e0d3-4b7e-9077-72a1ea0d95de">
+        <column name="ListRoleId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+    </composite-id>
+  </class>
+  <class name="RefreshLog" entity-set="RefreshLogs" table="RefreshLog" schema="dbo" p1:Guid="4e65cdf3-5f6a-4be4-b19a-26f741766a39">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="85e53d0c-2b0e-420d-b56d-4e95a1e006bd">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="UserId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="230480d6-6ff2-442f-bbd2-ea8cd969f36e">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ListId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="f34bdbc1-fa5b-4098-850a-c7dc4cdb0b81">
+      <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="StartTimeStamp" type="DateTime" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="c5c3a59f-4f78-4130-b2c0-ee8caa833a19">
+      <column name="StartTimeStamp" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="EndTimeStamp" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="51c989fb-4773-4b72-92af-b2a2dbbbbbbc">
+      <column name="EndTimeStamp" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="Successful" type="Boolean" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="e9bcd4d7-37aa-43cb-8fc0-35c02e58687d">
+      <column name="Successful" default="0" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="RefreshStateId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="cadc1e16-d779-43d0-b62b-768b35dd060b">
+      <column name="RefreshStateId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="JobName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="512" p1:ValidateRequired="false" p1:Guid="b5b44c70-9032-4428-bd46-8c32eefbb203">
+      <column name="JobName" not-null="False" length="512" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="JobId" type="Guid" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7da4ae4a-f6ac-48f7-be10-5326cd518b84">
+      <column name="JobId" not-null="False" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="Copy" type="Boolean" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="92180fd5-fbcd-4fa0-907e-d45ed78c7461">
+      <column name="Copy" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="SourceList" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2eee9b79-c754-4e82-a2d1-ffb2f2b41c93">
+      <column name="SourceList" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ErrorMessage" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="126cd38b-8f2f-4229-bd9e-818b091be4b7">
+      <column name="ErrorMessage" not-null="False" length="255" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Role" entity-set="Roles" table="Role" schema="dbo" p1:Guid="5fadc7f4-cae3-4bf6-ac0b-73b61abf318c">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="04c1a2f5-61f9-4371-bbaf-ab673ea672e6">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="fc2cdac4-88d4-4ba9-ab87-1f7013217d7a">
+      <column name="Name" not-null="True" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="User" entity-set="Users" table="`User`" schema="dbo" p1:Guid="8e04ca43-1a85-4f24-a859-dd4904f0db46">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="be41dca9-a71b-46b0-ad63-4841a324870f">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="VuNetId" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="16" p1:ValidateRequired="true" p1:Guid="8e2bfa52-f674-4bca-b8e1-572175c1d785">
+      <column name="VuNetId" not-null="True" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FirstName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="5d36836f-5b7b-48e3-a228-4bccc2675301">
+      <column name="FirstName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LastName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="6a298013-7846-4b48-85aa-d9244119bdf3">
+      <column name="LastName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Email" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="256" p1:ValidateRequired="true" p1:Guid="0a8acd86-3f5a-46b3-b0b4-5b162ca44b91">
+      <column name="Email" not-null="True" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CreateUser" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="16" p1:ValidateRequired="true" p1:Guid="d4bb0d80-e40b-49e9-8e2d-b4714e202b4f">
+      <column name="CreateUser" not-null="True" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CreateDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="5293669b-11b8-4efc-81e1-08b4545b4651">
+      <column name="CreateDate" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastLoginDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="77daaa67-d7c4-4f6f-be2c-496d83036218">
+      <column name="LastLoginDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastListId" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d6895274-1e02-452d-8c59-d7741fa6f4e4">
+      <column name="LastListId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="UserRole" entity-set="UserRoles" table="UserRole" schema="dbo" p1:Guid="7b5265c6-dc1f-4838-9d41-7462c491db89">
+    <composite-id>
+      <key-property name="UserId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="a034e0ef-faa0-46c4-9240-3f45ae0ee153">
+        <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="RoleId" type="Int32" p1:inheritance-modifier="Virtual" primary-key-index="1" p1:ValidateRequired="true" p1:Guid="a57aa681-927f-4fbc-bcf0-10763d1cd870">
+        <column name="RoleId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+    </composite-id>
+  </class>
+  <class name="Protection" entity-set="Protections" table="Protection" schema="dbo" p1:Guid="a42a190b-61a9-4e97-b4d2-933a7315f7be">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="c4642d97-1aff-4cb9-868a-8594d2879d70">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="f1a6707a-0820-41a5-a3c9-8436211176d1">
+      <column name="Name" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Description" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="e787c17c-19ce-4157-8c1a-71da400b2dd2">
+      <column name="Description" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="DropDown" entity-set="DropDowns" table="DropDown" schema="dbo" p1:Guid="ca66026f-9a7c-4123-ab6c-693da7127d23">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="54fbfa51-dcfc-41e6-971a-6d82aad537e6">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="TypeId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="29fb4043-9533-4bd7-a310-60e3b2ca8709">
+      <column name="TypeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="150" p1:ValidateRequired="true" p1:Guid="d94e2d58-c6f5-4166-b6cf-976ef6591f68">
+      <column name="Name" not-null="True" length="150" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Description" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="91f4b9b3-7d07-409b-aae2-2844ab51d179">
+      <column name="Description" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Code" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="150" p1:ValidateRequired="false" p1:Guid="2398feda-5931-4008-9a63-9c1ed16b6be4">
+      <column name="Code" not-null="False" length="150" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FilterValue" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="480410db-1263-4951-8730-75f83563b0b7">
+      <column name="FilterValue" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Rank" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="33e841d9-897f-4bf0-9cbf-b660043776b1">
+      <column name="Rank" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SortOrder" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="347f4f95-af59-4bd7-bd0c-eb23a619f037">
+      <column name="SortOrder" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Display" type="Boolean" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="e7036c96-18f8-40d7-9274-5bd80ef86473">
+      <column name="Display" default="1" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="DropDownType" entity-set="DropDownTypes" table="DropDownType" schema="dbo" p1:Guid="c8e48807-b96f-484c-9e20-b6da8977dba6">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="75ea35b5-0b31-49fd-bf5c-a058f51e7cd2">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="2f438202-5d36-4326-a491-33b26be8a7db">
+      <column name="Name" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Description" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="a7fa86eb-e4f8-4d25-90b9-6dae29cbb588">
+      <column name="Description" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="SavedObject" entity-set="SavedObjects" table="SavedObject" schema="dbo" p1:Guid="30c6b47f-5af8-43e0-b7ff-debf71e16cee">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="d222ee8a-11e9-431b-baae-cffdc7d45301">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="UserId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="18c6276f-396c-4459-9d47-56e2b5e52893">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="ea9f7683-e603-4c01-82ba-d7e69cbda3a2">
+      <column name="Name" not-null="True" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Description" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="18d1bdac-86fb-44c5-856c-586124c0d086">
+      <column name="Description" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="StoredObject" type="Clob" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="2147483647" p1:ValidateRequired="true" p1:Guid="d65ac2b1-7d66-4f34-b910-d2427e7e59aa">
+      <column name="StoredObject" not-null="True" length="2147483647" sql-type="text" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="RefreshState" entity-set="RefreshStates" table="RefreshState" schema="dbo" p1:Guid="9046c481-abb8-47be-a174-34c7f69476a4">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="fc0493fa-46e4-4d18-8388-d38ad5914376">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="cf85ddc0-8ee0-4ebb-b22d-ad6b2a5e4dcc">
+      <column name="Name" not-null="True" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="VwHighSchool" entity-set="VwHighSchools" table="vw_HighSchool" schema="dbo" p1:Guid="822c06e5-d3d7-450a-9a72-6858ed0aa1ef">
+    <id name="Code" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="16" p1:ValidateRequired="true" p1:Guid="cc9a4dd2-77b1-4ffb-813f-1fa470f93dd6">
+      <column name="Code" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </id>
+    <property name="State" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="128" p1:ValidateRequired="false" p1:Guid="06d810ed-db71-4973-94f1-fd79e3e56b44">
+      <column name="State" not-null="False" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="aebaaa8a-7f25-4113-b903-e6a157bdca49">
+      <column name="Name" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Rating" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="4" p1:ValidateRequired="false" p1:Guid="8b9276c1-4ef2-457d-9225-d5eef2b255ae">
+      <column name="Rating" not-null="False" length="4" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Region" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="b551dd7d-b356-40b9-8520-765f7065b37f">
+      <column name="Region" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="VwListAttributeView" entity-set="VwListAttributeViews" table="vwListAttributeView" schema="dbo" p1:Guid="1ff09ae3-c625-4f70-9744-214e59fc4cb8">
+    <id name="UniqueId" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="95" p1:ValidateRequired="true" p1:Guid="a61c7105-f76f-4f7d-b299-df31f33278fe">
+      <column name="UniqueId" not-null="False" length="95" sql-type="varchar" p1:unicode="False" />
+    </id>
+    <property name="CompositeId" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="84" p1:ValidateRequired="false" p1:Guid="5f7c22cb-0156-40d3-ad3f-77a6655bd492">
+      <column name="CompositeId" not-null="False" length="84" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ListId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="49c302e7-08d5-4b31-88ad-99c93e3bd079">
+      <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ListName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="19ef489c-d4e5-40a5-842f-e56b82d4378e">
+      <column name="ListName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ApplicationId" type="Guid" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="5c4092b7-c31d-436b-b0c9-b27bb19c0e1d">
+      <column name="ApplicationId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="PersonId" type="Guid" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="7bcf5528-3b00-416e-a969-3a6c48417636">
+      <column name="PersonId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="AttributeId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="3cca504f-bcaf-4b6c-8b56-61cc6141f7b2">
+      <column name="AttributeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="AttributeName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="8184f190-9b1a-44a7-8e7d-bc7be5a6f962">
+      <column name="AttributeName" not-null="True" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="AttributeCreatedByUserId" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="592a8638-6b39-4a6b-a45e-3f19b8c7d75f">
+      <column name="AttributeCreatedByUserId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="AttributeCreatedByFirstName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="dc0cdf8e-bcce-4e6e-baea-524cdfbd5f37">
+      <column name="AttributeCreatedByFirstName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="AttributeCreatedByLastName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="3ab6563d-90b5-4a1e-a789-cfa19ae1428b">
+      <column name="AttributeCreatedByLastName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="AttributeCreatedDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e836500e-b74e-4fbb-b0b5-1a9f1145ad39">
+      <column name="AttributeCreatedDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastModifiedByUserId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="14c9c118-4e96-4590-b870-a8db4cb261cd">
+      <column name="LastModifiedByUserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="LastModifiedByFirstName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="f8773fee-6c8a-448f-9841-8123fc73a470">
+      <column name="LastModifiedByFirstName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LastModifiedByLastName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="42e0d4dd-9bbd-4ecb-9e87-8d50ac7686b6">
+      <column name="LastModifiedByLastName" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LastModifiedDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="27ed07c7-7832-477c-83e1-6946b5c32f12">
+      <column name="LastModifiedDate" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="CountUsageInList" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="451fb8c6-7b46-4b7b-96fa-4625d6ab7558">
+      <column name="CountUsageInList" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CountTotalUsage" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c4eb267d-f0af-4473-ade4-d091cbf7acb7">
+      <column name="CountTotalUsage" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ApplicantFirstName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="b38825f5-5788-45c7-a475-0750789c75da">
+      <column name="ApplicantFirstName" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ApplicantLastName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="927ea429-0510-4c9a-bf20-c5e6bf2926c6">
+      <column name="ApplicantLastName" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="VwListAttributeViewGrid" entity-set="VwListAttributeViewGrids" table="vwListAttributeViewGrid" schema="dbo" p1:Guid="f137fcea-d4f9-4d75-abcc-2b4dd63b1b07">
+    <id name="UniqueId" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="95" p1:ValidateRequired="true" p1:Guid="c3b1b37f-024e-45a9-844a-ca83a1378659">
+      <column name="UniqueId" not-null="False" length="95" sql-type="varchar" p1:unicode="False" />
+    </id>
+    <property name="CompositeId" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="84" p1:ValidateRequired="false" p1:Guid="6fad4ef8-16bd-4459-bce7-67f941382cc6">
+      <column name="CompositeId" not-null="False" length="84" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="AttributeId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="c4c07fe6-4b01-4650-96b6-4036adc660c3">
+      <column name="AttributeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="AttributeName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="2fb6c914-242c-4f00-a12e-03c81d0fab24">
+      <column name="AttributeName" not-null="True" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="VwDropdownAttributeGrid" entity-set="VwDropdownAttributeGrids" table="vwDropdownAttributeGrid" schema="dbo" p1:Guid="e2550929-8bd2-4dcb-abbd-cfeb21b25f7b">
+    <id name="AttributeId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="6f2f26b1-bc18-49ae-9322-1bd2ce86603c">
+      <column name="AttributeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="AttributeName" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="52094d8c-397c-46e0-88c7-326c7c6dd872">
+      <column name="AttributeName" not-null="True" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DateCreated" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d35d8cdb-6b02-4d21-91b6-b5eec236b28b">
+      <column name="DateCreated" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="CreatedByUserId" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fc0f9633-9d44-4bb0-91de-558263b49ab5">
+      <column name="CreatedByUserId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CreatedByUserName" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="129" p1:ValidateRequired="false" p1:Guid="bd9dc966-e87e-40aa-87e5-2f65c6b672b0">
+      <column name="CreatedByUserName" not-null="False" length="129" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CreatedByUserEmail" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="257" p1:ValidateRequired="false" p1:Guid="6ca64980-49f0-4a1a-902f-6ae3fda8ea4c">
+      <column name="CreatedByUserEmail" not-null="False" length="257" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="HistoricalTarget" entity-set="HistoricalTargets" table="HistoricalTarget" schema="dbo" p1:Guid="1fcaf77c-88c6-47f1-850e-db8621434843">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0ad07e41-d2fe-4bfb-8400-f9867a26b6da">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="HistoricalTargetTypeId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="3aa287b1-dd6c-4e91-b208-54c99701d21f">
+      <column name="HistoricalTargetTypeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Cohort" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="5" p1:ValidateRequired="true" p1:Guid="c95ed5f9-e0ac-478d-bd6f-293744d2fc17">
+      <column name="Cohort" not-null="True" length="5" sql-type="char" p1:fixed-length="True" p1:unicode="False" />
+    </property>
+    <property name="Count" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5bddd221-963e-4e46-8cc3-cd4d15e4c30b">
+      <column name="`Count`" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="OldSAT" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="218508eb-4f82-4180-967f-716e6cfbbcf2">
+      <column name="OldSAT" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="NewSAT" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c2ed124e-2ec4-49b4-aae2-6e7f06622afe">
+      <column name="NewSAT" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="ACT" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ceed86ae-cea6-4341-b9f9-63521ec4da49">
+      <column name="ACT" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="RIC" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c6534181-d524-4697-b09a-96fa6650222f">
+      <column name="RIC" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="TOP10" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0cfa773c-57f8-4e17-9eed-8d9f7303fece">
+      <column name="TOP10" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="TN" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6db5f552-e730-472f-b361-f9e95dddf7c4">
+      <column name="TN" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="NE" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="256f1589-29ae-4d2f-bd97-0dd6c592bbcd">
+      <column name="NE" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="MS" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6da57cdb-14f2-4674-8ec7-5f18cf4721f1">
+      <column name="MS" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SO" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3c78a9ea-d67e-4f54-90ea-39909c806221">
+      <column name="SO" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="MW" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="868b05cb-7f22-4a40-8e7c-0a47c9b1dbfe">
+      <column name="MW" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SW" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="00875d9d-cbc2-4762-b5b7-851ba4f1d79c">
+      <column name="SW" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="WS" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1fe16755-fa71-40b7-aaba-c7fe45134498">
+      <column name="WS" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Min" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="de7f9512-b528-4fda-9a3f-893d544a745d">
+      <column name="`Min`" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="I" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d4e3125e-7013-47d5-98cb-c205837a3b58">
+      <column name="I" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="A" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5e01af1b-a074-4afc-aa56-7a6e00bbb380">
+      <column name="A" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="B" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="96ad74db-ef64-49bf-b36a-dea00a168f97">
+      <column name="B" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="H" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e5d36617-23e2-437e-bcc6-d455a5692b59">
+      <column name="H" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="P" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="683cf7df-fb4a-45a1-b2ab-495e7f6c189d">
+      <column name="P" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="W" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a16e12aa-947e-4b88-acce-0619ab8ab4bb">
+      <column name="W" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="N" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fca50983-ab24-4605-9742-b62fc9b1de7d">
+      <column name="N" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Multi" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dbbb8c58-a396-429c-836b-a87cc4207520">
+      <column name="Multi" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Intl" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="63230a13-3b73-473f-bc87-417327f04808">
+      <column name="Intl" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Male" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c39f7a7d-5841-476b-a208-ee5536d0ebad">
+      <column name="Male" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Female" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="08adb5b7-e048-46fc-804f-ab82194afe1c">
+      <column name="Female" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="EffectiveDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="8e560a00-3946-4272-9073-09e78cec0ca5">
+      <column name="EffectiveDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="School" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="d5efe02b-b6fb-4728-a5f9-d20a8f3f7d8f">
+      <column name="School" not-null="False" length="50" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Major" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="5394780b-2af9-4bf6-8d61-7c8008bde19b">
+      <column name="Major" not-null="False" length="50" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SchoolDivision" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="92ddc0c3-7965-4734-bf70-a7bb868f8890">
+      <column name="SchoolDivision" not-null="False" length="50" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="NotificationPlanCode" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="b0e33e96-486a-4a3f-b757-e2c2827b8631">
+      <column name="NotificationPlanCode" not-null="False" length="50" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="TermNotif" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="1df4d9dc-723d-463e-86d3-4453422e16e0">
+      <column name="TermNotif" not-null="False" length="50" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="IPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6498cd8b-7a9e-4b13-b6f3-063f0db92616">
+      <column name="" />
+    </property>
+    <property name="BPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fd93d826-f81c-4525-a520-3938bb548bbf">
+      <column name="BPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="HPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cce162e1-034d-48a8-947e-8267a5dfbcd0">
+      <column name="HPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="PPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3975e40e-d5a2-49ff-8a7f-0155545417a0">
+      <column name="PPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="WPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f7d9e3db-fc45-4d70-8df0-3d7e4fcc2633">
+      <column name="WPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="NA" type="Int32" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6ac5fc8f-0fe2-4015-ba67-fc84079d6bba">
+      <column name="NA" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="NAPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e0ab6558-b52c-44dc-83f2-dc1f3d01df57">
+      <column name="NAPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="MultiPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1954966e-5551-45ea-9aea-de48852a960e">
+      <column name="MultiPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="IntlPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f1354b99-7d34-4ae8-9725-5a062568eaa8">
+      <column name="IntlPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="MalePerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f72f102d-08dd-456a-ae12-a473d75eb5c5">
+      <column name="MalePerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="FemalePerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1d210d7f-dc6f-4a0d-be8b-6068a917e608">
+      <column name="FemalePerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="APerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="158c8869-ad05-447e-b125-431d640060f4">
+      <column name="" />
+    </property>
+    <property name="MinPerc" type="Double" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="dcca028f-b028-433f-b603-afc393de5889">
+      <column name="MinPerc" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="HistoricalTargetType" entity-set="HistoricalTargetTypes" table="HistoricalTargetType" schema="dbo" p1:Guid="0b78b969-9ae6-40ee-8035-0c96eafdab4f">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2dee5d1f-64a5-4c9e-9253-f6f3fb67d760">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="64" p1:ValidateRequired="true" p1:Guid="c2c92f9e-caf6-4279-85aa-453ca9de2c9d">
+      <column name="Name" not-null="True" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="Description" type="String" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="3dd9359a-0c95-4ca9-87e9-4302e338fdd8">
+      <column name="Description" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ImportAttrib" entity-set="ImportAttribs" table="ImportAttribs" schema="dbo" p1:Guid="44abc0e4-b78a-4899-9e1b-cceee463f024">
+    <id name="Id" type="Int64" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="799ae59c-cfb3-450b-97b6-4daea5295062">
+      <column name="Id" not-null="True" precision="19" scale="0" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="UserId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="cbceae34-ee24-4d62-9300-4eeaeb617842">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ImportStateId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="9d39d67d-9c3a-49b9-977c-99a441fe8852">
+      <column name="ImportStateId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Spreadsheet" type="VarBinary" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2ee9db00-d385-44f7-a2fd-f8b9b70c2bfc">
+      <column name="Spreadsheet" not-null="False" sql-type="varbinary(max)" p1:unicode="False" />
+    </property>
+    <property name="ImportLog" type="VarBinary" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ddf830bd-7344-4fa3-b3b2-9769020fc57a">
+      <column name="ImportLog" not-null="False" sql-type="varbinary(max)" p1:unicode="False" />
+    </property>
+    <property name="UploadDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="cf116244-0eaf-4c6a-b007-cd490914a0ef">
+      <column name="UploadDate" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ImportDate" type="DateTime" p1:inheritance-modifier="Virtual" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ed5ab0ae-ca5b-4ebc-8f1a-e5a1b7f9028b">
+      <column name="ImportDate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ListId" type="Int32" p1:inheritance-modifier="Virtual" p1:ValidateRequired="true" p1:Guid="1b76b24f-1f3c-4add-8637-3047fe57d561">
+      <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="ImportState" entity-set="ImportStates" table="ImportState" schema="dbo" p1:Guid="0b17f743-9359-4f35-81c6-10cb4a5dd868">
+    <id name="Id" type="Int32" p1:inheritance-modifier="Virtual" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="cc5680de-622a-4074-aa14-ed7ffa054d7a">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:inheritance-modifier="Virtual" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="f39f5bae-6a83-4605-8ed5-657bb3567738">
+      <column name="Name" not-null="True" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="AuditLog" entity-set="AuditLogs" table="AuditLog" schema="dbo" p1:Guid="46caf0b0-357d-49f5-ba2c-64d37ca25bbb">
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="0e2f0c3a-bb65-4723-949c-329c81e31a34">
+      <column name="Id" not-null="True" precision="19" scale="0" sql-type="bigint" p1:unicode="False" />
+    </id>
+    <property name="ListId" type="Int32" p1:ValidateRequired="true" p1:Guid="a9741888-f895-48ac-be30-6cacc60a2014">
+      <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ApplicationId" type="Guid" p1:ValidateRequired="true" p1:Guid="02877a65-dd8e-4ba9-b3b7-b4fcc3d5af18">
+      <column name="ApplicationId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="PersonId" type="Guid" p1:ValidateRequired="true" p1:Guid="91e06591-3508-4de7-9bbd-3478b2806a86">
+      <column name="PersonId" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="UserId" type="Int32" p1:ValidateRequired="true" p1:Guid="d435e9eb-e912-412b-9ef9-54ee4d9ad244">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="LogDate" type="DateTime" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="3fbc4dc7-2983-49c2-b145-90cf93fd359c">
+      <column name="LogDate" default="getdate()" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ProtectionId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f8bac4d1-b224-40b1-a78f-e08b7428e9a8">
+      <column name="ProtectionId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CustomAttributeId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b1db5854-c4ce-4075-b38e-4d35e66f5e9f">
+      <column name="CustomAttributeId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Action" type="String" p1:ValidateMaxLength="32" p1:ValidateRequired="true" p1:Guid="5fc45a3c-3ffe-499e-b62c-e1a80c7a7737">
+      <column name="Action" not-null="True" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="FilterAuditLog" entity-set="FilterAuditLogs" table="FilterAuditLog" schema="dbo" p1:Guid="9b8b1ea1-c2e1-4cd7-8f12-b68c5c218641">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="ade313d6-1e23-4db8-9473-8fc12113d20a">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="ListId" type="Int32" p1:ValidateRequired="true" p1:Guid="b5012fc8-d3eb-4fab-8264-a0935cd2e4b9">
+      <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UserId" type="Int32" p1:ValidateRequired="true" p1:Guid="f9670928-5dcf-40d9-9240-e0ac91927fc3">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="FilterDateTime" type="DateTime" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="f1406eba-5b08-4991-94e9-8ecf90d64677">
+      <column name="FilterDateTime" default="getdate()" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="FilterObject" type="Clob" p1:ValidateMaxLength="2147483647" p1:ValidateRequired="true" p1:Guid="0671f7ce-499b-428f-8291-d27a93404599">
+      <column name="FilterObject" not-null="True" length="2147483647" sql-type="text" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Queue" entity-set="Queues" table="Queue" schema="dbo" p1:Guid="21317ee5-dcd8-4e40-afca-e887394ecfd5">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="d0434e4f-f096-4dac-aa0c-1d4d43984ad3">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="QueueTypeId" type="Int32" p1:ValidateRequired="true" p1:Guid="c5135d7b-1930-419b-bcca-53a8adb4d281">
+      <column name="QueueTypeId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UserId" type="Int32" p1:ValidateRequired="true" p1:Guid="cb4cf2d4-65ff-41f3-a813-2b965110f573">
+      <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ListId" type="Int32" p1:ValidateRequired="true" p1:Guid="6a335f5b-d96c-4b64-aaf5-86d798ed3541">
+      <column name="ListId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="DateSubmitted" type="DateTime" p1:ValidateRequired="true" p1:Guid="73fa5ce5-c457-4c0c-bf02-2b8b6adf40a1">
+      <column name="DateSubmitted" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LastUpdate" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="900b2fda-65a7-4361-96b1-1f3f99e5286b">
+      <column name="LastUpdate" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="DateStart" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d68ed855-b0f5-411f-b267-53882474514f">
+      <column name="DateStart" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="DateEnd" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="28a6a165-8d2e-4a75-ab7c-1bd42868bf81">
+      <column name="DateEnd" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="TotalRows" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="9128dc05-7ae4-4081-b56d-b4ca79d45f88">
+      <column name="TotalRows" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CurrentRow" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5c2262ca-79bc-4d45-af12-d74b6eee2c18">
+      <column name="CurrentRow" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="IsDelete" type="Boolean" p1:ValidateRequired="true" p1:Guid="a07f2d04-f3a0-4fd4-9817-053e5c09b11c">
+      <column name="IsDelete" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="IsJson" type="Boolean" p1:ValidateRequired="true" p1:Guid="2c42ca87-d8b7-452a-bcf3-a7f488fce88f">
+      <column name="IsJson" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="RecordString" type="String" p1:ValidateRequired="true" p1:Guid="86709143-f902-474a-b9d4-93264aa70106">
+      <column name="RecordString" not-null="True" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="ActionTitle" type="String" p1:ValidateMaxLength="128" p1:ValidateRequired="true" p1:Guid="b87cd332-7e1d-4751-80d8-3e5ab72c33a9">
+      <column name="ActionTitle" not-null="True" length="128" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="IsError" type="Boolean" p1:ValidateRequired="true" p1:Guid="c993a56a-e185-498f-affd-822aacfd34aa">
+      <column name="IsError" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="ProtectionId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fea6303b-13ee-46d8-a4af-2d29c5ea717f">
+      <column name="ProtectionId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="CustomAttributeId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="71d4f346-3d0c-4adf-a0dd-d9b9b1cb1905">
+      <column name="CustomAttributeId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="Message" type="String" p1:nullable="True" p1:ValidateMaxLength="2048" p1:ValidateRequired="false" p1:Guid="3996d90b-67c0-4c63-9e5d-6ae96075ce01">
+      <column name="Message" not-null="False" length="2048" sql-type="varchar" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="QueueType" entity-set="QueueTypes" table="QueueType" schema="dbo" p1:Guid="87f04f96-6413-420b-8f5a-88ed1257d488">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="df3abb32-4f0e-4188-ac28-ddc465856b48">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:ValidateRequired="true" p1:Guid="b12b36ef-795d-43ab-80c7-e66dce1cbd19">
+      <column name="Name" not-null="True" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="06e76319-f1c5-4891-b1a2-538101635f2b">
+      <column name="IsActive" not-null="True" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="SortOrder" type="Int32" p1:ValidateRequired="true" p1:Guid="f2c2e0f2-665b-4f36-9756-a76eafa742e4">
+      <column name="SortOrder" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="VwCombinedAppPool" entity-set="VwCombinedAppPools" table="vwCombinedAppPools" schema="dbo" query-type="True" p1:Guid="3f2b7208-2bed-42fd-bf6d-8e32644c1efd">
+    <property name="APPLICATIONID" type="Guid" p1:ValidateRequired="true" p1:Guid="5446d182-e586-47ba-afd0-dd6225a7157d">
+      <column name="APPLICATION_ID" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="PERSONID" type="Guid" p1:ValidateRequired="true" p1:Guid="f572d859-bb4f-4568-99a4-f02258003c20">
+      <column name="PERSON_ID" not-null="True" sql-type="uniqueidentifier" p1:unicode="False" />
+    </property>
+    <property name="SLATEREFID" type="String" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="e6550cfb-37ac-4612-990c-06fb9d258173">
+      <column name="SLATE_REF_ID" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="EMPLID" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="84cac754-53b2-46c7-b5a0-1198476c4987">
+      <column name="EMPLID" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="PSADMAPPLNBR" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b48e6a11-6d3e-4e60-a16c-918c9a0d88f5">
+      <column name="PS_ADM_APPL_NBR" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="FIRSTNAME" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="447a4f13-7ba1-4d88-899a-d9e3ccc3afb1">
+      <column name="FIRST_NAME" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="MIDDLENAME" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="a671754a-c096-4332-a327-183a03ecf318">
+      <column name="MIDDLE_NAME" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LASTNAME" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="a18d2ab2-9880-4179-a63a-1e78a5283592">
+      <column name="LAST_NAME" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SEX" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="6397808d-8363-4c7e-afc7-f6974d4ef8f0">
+      <column name="SEX" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DOB" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ffe86859-57cf-4faa-971e-941d6274e157">
+      <column name="DOB" not-null="False" sql-type="date" p1:unicode="False" />
+    </property>
+    <property name="SOC" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="2bdd92a4-6d9f-41e2-9337-43cf06e7acae">
+      <column name="SOC" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="IPEDSETHNICCODE" type="String" p1:nullable="True" p1:ValidateMaxLength="8000" p1:ValidateRequired="false" p1:Guid="312f6237-a5be-46e8-8325-7be15782618f">
+      <column name="IPEDS_ETHNIC_CODE" not-null="False" length="8000" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CITIZENSHIPSTATUS" type="String" p1:nullable="True" p1:ValidateMaxLength="2" p1:ValidateRequired="false" p1:Guid="07e9221a-96a0-48a6-bcf3-2f54debc8d66">
+      <column name="CITIZENSHIP_STATUS" not-null="False" length="2" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="PRIMARYCITIZENSHIPCOUNTRY" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="9bea7be4-4461-4bf0-ba0b-8e38e5259de3">
+      <column name="PRIMARY_CITIZENSHIP_COUNTRY" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SECONDARYCITIZENSHIPCOUNTRY" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="f62f104c-fae2-4571-a0f2-3fccd0fa2f41">
+      <column name="SECONDARY_CITIZENSHIP_COUNTRY" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ROUNDKEY" type="String" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="fa8ad70c-dc25-4ed3-b987-8b870c20104b">
+      <column name="ROUND_KEY" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ADMITTYPE" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="1581bb74-6d75-4f6f-8c06-475a85a47833">
+      <column name="ADMIT_TYPE" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DECISIONCONFIRMEDDESCR" type="String" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="4d9cd3de-2599-4056-9160-80d5e3e102ac">
+      <column name="DECISION_CONFIRMED_DESCR" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DECISIONCONFIRMEDREASONDESCR" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="94c956d8-093a-4044-9026-e91be636514f">
+      <column name="DECISION_CONFIRMED_REASON_DESCR" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DECISIONCONFIRMEDCODE" type="String" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="e912a8d4-8b0d-4184-8b39-8fd93ccce496">
+      <column name="DECISION_CONFIRMED_CODE" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DECISIONCONFIRMEDREASONEXPORTKEY" type="String" p1:nullable="True" p1:ValidateMaxLength="16" p1:ValidateRequired="false" p1:Guid="c9479233-845b-43b2-8272-57e30d16dfe8">
+      <column name="DECISION_CONFIRMED_REASON_EXPORT_KEY" not-null="False" length="16" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="APPLICATIONADMITTERM" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e6920425-0957-4f71-8fa1-dd8e2080d00f">
+      <column name="APPLICATION_ADMIT_TERM" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="OUAGEOMARKET" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="ba6eb5aa-1fd6-44ba-92f2-c947896cd97d">
+      <column name="OUA_GEOMARKET" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="OUAREGION" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="425eed7b-e582-4a12-a09d-cdfc3bdf8d18">
+      <column name="OUA_REGION" not-null="True" length="10" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HSNAME" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="83769713-f1a0-4469-a0e1-bba924363876">
+      <column name="HS_NAME" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="STAFFASSIGNED" type="String" p1:nullable="True" p1:ValidateMaxLength="129" p1:ValidateRequired="false" p1:Guid="7de9d6b3-3b4e-4ef5-8244-8dddca4ebc87">
+      <column name="STAFF_ASSIGNED" not-null="False" length="129" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ETSCODE" type="String" p1:nullable="True" p1:ValidateMaxLength="32" p1:ValidateRequired="false" p1:Guid="b1d443e9-cbb1-4fd4-8c69-3196f51ac2d2">
+      <column name="ETS_CODE" not-null="False" length="32" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HSSTATE" type="String" p1:nullable="True" p1:ValidateMaxLength="64" p1:ValidateRequired="false" p1:Guid="a20a1141-1b7e-4151-8b47-3f2f9f227167">
+      <column name="HS_STATE" not-null="False" length="64" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HSRATING" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="d3b4c31c-325b-4555-8f9b-83e32eea6691">
+      <column name="HS_RATING" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOLOFCHOICE1" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="9121da7f-d6ca-4433-bf18-61344b03b7f5">
+      <column name="SCHOOL_OF_CHOICE_1" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOLOFCHOICE1DESCR" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="f45297ad-d151-4190-9f41-5e41bcc96daa">
+      <column name="SCHOOL_OF_CHOICE_1_DESCR" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOL1MAJOR1" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="34fd126c-aee2-4807-9d35-ee3511696eee">
+      <column name="SCHOOL_1_MAJOR_1" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOL1MAJOR1DESCR" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="8b90fe29-d120-4e37-aeb0-a0dbccea4dce">
+      <column name="SCHOOL_1_MAJOR_1_DESCR" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="GPCMAJOR" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="e329115b-ab62-4659-975c-0af3810e7f55">
+      <column name="GPC_MAJOR" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FINANCIALAIDINTEREST" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ad551a08-4051-416b-8a5a-5033b0aeaed7">
+      <column name="FINANCIAL_AID_INTEREST" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="PELLELIGIBLE" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7b1ccf47-fb41-422d-9a19-a39df7bfd09a">
+      <column name="PELL_ELIGIBLE" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="FACSTAFF" type="String" p1:nullable="True" p1:ValidateMaxLength="8000" p1:ValidateRequired="false" p1:Guid="b36c3c07-ef11-462b-8f3d-af63c96100d4">
+      <column name="FAC_STAFF" not-null="False" length="8000" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LEGACY" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="70fa6ed5-8e60-49ee-b6de-31bccb424010">
+      <column name="LEGACY" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="GIASTATUS" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="a2ca1ae7-31d0-48ab-8036-85a349749fb6">
+      <column name="GIA_STATUS" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="FIRSTGEN" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ca081073-d318-42e3-8f5e-9c318c47bcbe">
+      <column name="FIRST_GEN" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="POSSE" type="String" p1:nullable="True" p1:ValidateMaxLength="8000" p1:ValidateRequired="false" p1:Guid="7540a4d9-d67e-4b12-b11a-c85b5906d52e">
+      <column name="POSSE" not-null="False" length="8000" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CHICAGOSCHOLAR" type="String" p1:nullable="True" p1:ValidateMaxLength="8000" p1:ValidateRequired="false" p1:Guid="9ca22101-d502-46bd-9305-3291020438b2">
+      <column name="CHICAGO_SCHOLAR" not-null="False" length="8000" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="QUESTBRIDGE" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="3d318bf0-6bba-46e4-9cb3-bdb737e4a399">
+      <column name="QUEST_BRIDGE" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="MOSAIC" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="ae61ffb4-3694-46fe-b735-26e33e0a8af2">
+      <column name="MOSAIC" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="SCHFREEZE" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="1bdb4569-44a5-4620-8769-873092ff8ccb">
+      <column name="SCH_FREEZE" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CORNELIUSVANDERBILTAPPLIED" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="7f257a16-a81d-4be1-b874-5d0434a90639">
+      <column name="CORNELIUS_VANDERBILT_APPLIED" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="INGRAMAPPLIED" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="abcbe7f4-8223-4a2e-9bf5-6dbfbaa27e4d">
+      <column name="INGRAM_APPLIED" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CHANCELLORSAPPLIED" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="0e5c0764-966a-45e1-9561-503e2e509a7f">
+      <column name="CHANCELLORS_APPLIED" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="APPLICATIONUPDATE" type="DateTime" p1:ValidateRequired="true" p1:Guid="213bcdaf-ef41-42be-8939-5ca7c0bd845a">
+      <column name="APPLICATION_UPDATE" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="PERSONUPDATE" type="DateTime" p1:ValidateRequired="true" p1:Guid="149cea8a-bfc6-4a3c-8a36-3c6951e9d7d2">
+      <column name="PERSON_UPDATE" not-null="True" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="DECISIONUPDATE" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="eb0308f7-3ef1-472f-930b-8f82f1194ca0">
+      <column name="DECISION_UPDATE" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="ACTUPDATE" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="86e7bc33-974f-48c6-a433-2b707d52f689">
+      <column name="ACT_UPDATE" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="SCHOOLUPDATE" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d6400647-e86c-4ae1-ab4d-b7d7ba38e61c">
+      <column name="SCHOOL_UPDATE" not-null="False" sql-type="datetime" p1:unicode="False" />
+    </property>
+    <property name="LANDSCAPEHSNEIGHBORHOOD" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="c82dc5c4-1476-4cdf-97f6-607ac4ecea02">
+      <column name="LANDSCAPE_HS_NEIGHBORHOOD" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="LANDSCAPESTDNTNEIGHBORHOOD" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e1fe45b6-0a7a-4e16-b657-c377e743927a">
+      <column name="LANDSCAPE_STDNT_NEIGHBORHOOD" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="SUBMITTINGTESTING" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="51f7ddf8-670c-4ddd-862b-a66f57d88436">
+      <column name="SUBMITTING_TESTING" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="COURSEWORKRIGOR" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="777caaa2-9ecf-4525-beb5-bef37c9d0f52">
+      <column name="COURSEWORK_RIGOR" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="RURALHS" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="4dd243de-1443-4a92-9ed1-2761e09b8f01">
+      <column name="RURAL_HS" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DACAUNDOCUMENTED" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="8f37c55d-562a-4f7b-aa58-8e5df3280b94">
+      <column name="DACA_UNDOCUMENTED" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="KIPP" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="8c41c230-8c47-4d0b-b4b1-18a8d26e745f">
+      <column name="KIPP" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="NATLMERITAWARD" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a7c13046-4053-4bab-a44f-8bf10093238b">
+      <column name="NATL_MERIT_AWARD" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="CGRADEHS" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b204dc35-4817-4004-b1dc-ee01e70dc46f">
+      <column name="C_GRADE_HS" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="CGRADECOL" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5560e745-ad9e-48ea-885d-0efea7d94f29">
+      <column name="C_GRADE_COL" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="INSTITUTIONALNEED" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="505eebb8-97cf-4036-a818-ab0b8847f91b">
+      <column name="INSTITUTIONAL_NEED" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ORIGINALROUNDAPPLIED" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="c6dbc5ef-c5c5-485b-8220-be6990205bc1">
+      <column name="ORIGINAL_ROUND_APPLIED" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CHDIVERSITY" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="cb550e87-249d-4ea4-b4dc-bfc36072eaa1">
+      <column name="CH_DIVERSITY" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CHBRIDGINGGAPS" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="953e3b7a-aa60-47a5-b384-77aa67fdb17a">
+      <column name="CH_BRIDGING_GAPS" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CHLEADERSHIP" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="971ebea6-e1fd-42f5-8d7e-541bc5b0617b">
+      <column name="CH_LEADERSHIP" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CHOVERALL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="e423c2e0-9a84-487f-b40e-9b03890df2d4">
+      <column name="CH_OVERALL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTLETTER" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="df8ad675-9f8d-45f3-8acc-1c1d110a3ca8">
+      <column name="WAITLIST_LETTER" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="INTLHIGHSCHOOL" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="2623ace6-8055-4228-9ca9-d6e5ccf0ac3c">
+      <column name="INTL_HIGH_SCHOOL" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="APPCOMPLETE" type="Int32" p1:ValidateRequired="true" p1:Guid="fe2a6bf4-95bc-4083-ab8e-df20b21e7ffb">
+      <column name="APP_COMPLETE" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="SATRADMISSIONSSCORE" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="446256f5-7bf1-49d0-9d07-38d3e8cfb63f">
+      <column name="SATR_ADMISSIONS_SCORE" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="SATRHIGHESTVERIFIEDMAXERW" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="483dce22-0db8-4c10-aca3-b6b41ad15369">
+      <column name="SATR_HIGHEST_VERIFIED_MAX_ERW" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="SATRHIGHESTVERIFIEDMAXMATH" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a006f4f2-e4c5-475f-85be-08f264f2b6da">
+      <column name="SATR_HIGHEST_VERIFIED_MAX_MATH" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="ACTADMISSIONSSCORE" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0b40167d-594c-4612-a8d4-98b0eda3cdb8">
+      <column name="ACT_ADMISSIONS_SCORE" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="ACTHIGHESTVERIFIEDTOTALENGLISH" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="30064ae4-c319-445b-adca-af625d99548b">
+      <column name="ACT_HIGHEST_VERIFIED_TOTAL_ENGLISH" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="ACTHIGHESTVERIFIEDTOTALMATH" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cd8a1fcf-3495-4dec-b7a5-99e59409a8e6">
+      <column name="ACT_HIGHEST_VERIFIED_TOTAL_MATH" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="RIC" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cacf8a2f-a3c4-42d1-8a2b-2d9732c0d3c3">
+      <column name="RIC" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="ERIC" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e4528a46-58e6-458b-9399-1f56502d655d">
+      <column name="ERIC" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="HSGPACALCULATED" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="7d26caf4-1f21-4e68-a607-a1979b26f638">
+      <column name="HSGPA_CALCULATED" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="LATESTEVAL" type="String" p1:ValidateMaxLength="18" p1:ValidateRequired="true" p1:Guid="0496ec86-99a5-4824-90a5-e2c977c9e773">
+      <column name="LATEST_EVAL" not-null="True" length="18" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="EVALUATIONSTATUS" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4489e699-d8e3-4af5-9b4a-5749584db204">
+      <column name="EVALUATION_STATUS" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="EVALSTATUSDESCR" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b84fc0ae-468c-4a78-9849-82800add86fd">
+      <column name="EVAL_STATUS_DESCR" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="AR" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="e5796adf-2bc3-46e6-a2be-973af0133372">
+      <column name="AR" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="ARVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="a81dffe3-d6ca-4669-8365-7773f31164c6">
+      <column name="AR_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="PR" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2c4bcede-79e3-4993-b57d-c078a1a0f8ca">
+      <column name="PR" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="PRVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="2d4ad49c-0a6d-4ee8-bb2d-d448ba6d1ef4">
+      <column name="PR_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SF" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6513d7d5-8982-4325-8618-42d857bcb885">
+      <column name="SF" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="SFVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="43cf5d86-051e-4c21-90ae-9f68a4f934c8">
+      <column name="SF_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="OVR" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b60f40ef-8155-4384-9b9a-a0be45a5f219">
+      <column name="OVR" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="OVRVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="76e72c34-33d7-4b15-ba50-576c3756434a">
+      <column name="OVR_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTACTIVEDATE" type="String" p1:nullable="True" p1:ValidateMaxLength="4000" p1:ValidateRequired="false" p1:Guid="1c8dc607-9d23-4ab2-936d-794c6f8a4203">
+      <column name="WAITLIST_ACTIVE_DATE" not-null="False" length="4000" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="WLSTRONG" type="String" p1:nullable="True" p1:ValidateMaxLength="1" p1:ValidateRequired="false" p1:Guid="2670d434-bde9-4e50-ae27-4fc54debbe89">
+      <column name="WL_STRONG" not-null="False" length="1" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="WLSTRONGDATE" type="String" p1:nullable="True" p1:ValidateMaxLength="4000" p1:ValidateRequired="false" p1:Guid="d975d330-3b90-44bd-988c-e1ddd150756c">
+      <column name="WL_STRONG_DATE" not-null="False" length="4000" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="WAITLISTCHALLENGE1" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="565410df-9765-4c21-a92b-875c85f6b602">
+      <column name="WAITLIST_CHALLENGE_1" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE2" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4813cc00-4174-476f-8523-f7edf123a62c">
+      <column name="WAITLIST_CHALLENGE_2" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE3" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a3f989cf-0343-485f-862b-ed2a2c2d067f">
+      <column name="WAITLIST_CHALLENGE_3" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE4" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e21636d8-9357-4c04-bd38-9d6b73f976e9">
+      <column name="WAITLIST_CHALLENGE_4" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE5" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4a8ba75c-aa8a-4968-a5d8-9eec08109418">
+      <column name="WAITLIST_CHALLENGE_5" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE6" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cceda35b-c37d-427e-a3a9-4029a58506ca">
+      <column name="WAITLIST_CHALLENGE_6" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE7" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="813581d0-1038-466e-b348-fc5b410d3db4">
+      <column name="WAITLIST_CHALLENGE_7" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE8" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a562c7ec-e45d-463f-bf8b-931336d9de6d">
+      <column name="WAITLIST_CHALLENGE_8" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTCHALLENGE9" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="449835db-fafc-4adb-bf85-2bd9d54a5fc8">
+      <column name="WAITLIST_CHALLENGE_9" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTPREOFFER" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="424b38e1-bceb-442b-ba11-18f76e0ad73c">
+      <column name="WAITLIST_PRE_OFFER" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTPREOFFERRESPONSE" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="199b51ef-3092-4295-8eaa-c466c18c3e69">
+      <column name="WAITLIST_PRE_OFFER_RESPONSE" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="EVER4YR" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b490f443-c8e1-4fbf-abd3-61ba5bead274">
+      <column name="EVER_4_YR" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="MULTIPLECOLLEGES" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e493a675-0398-499e-85b1-388651e675b6">
+      <column name="MULTIPLE_COLLEGES" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="NUMBERCOLLEGES" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2ea470ad-93a8-459d-ae1e-1093d960240b">
+      <column name="NUMBER_COLLEGES" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="HSGRADYR" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bc4f0da6-9735-4812-b4cd-049db95f2886">
+      <column name="HS_GRAD_YR" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="CURRENTCOLLINTL" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="cec38253-4bc5-4fce-996c-f076547d4ded">
+      <column name="CURRENT_COLL_INTL" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="COLLEGECREDITS" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5254fbb6-b336-41f9-bc6d-0472df27f634">
+      <column name="COLLEGE_CREDITS" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="SCHOOL1HOURS" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="62c39581-c7e6-4c4b-8a96-8775fd516350">
+      <column name="SCHOOL_1_HOURS" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="HOURSTYPE1" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="53447a2b-d4da-4c9d-ae77-4d5824f0d467">
+      <column name="HOURS_TYPE_1" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOL2HOURS" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="024de39c-ec37-4234-a805-bf1567026349">
+      <column name="SCHOOL_2_HOURS" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="HOURSTYPE2" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="983a0e08-c0a9-4c5d-8e7b-fef88a3c1e5c">
+      <column name="HOURS_TYPE_2" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOL3HOURS" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="3461ac7d-eb09-4314-b6e6-f4521ed0278c">
+      <column name="SCHOOL_3_HOURS" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="HOURSTYPE3" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="1f46de3d-c546-4000-b30e-3196be448e03">
+      <column name="HOURS_TYPE_3" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="SCHOOL4HOURS" type="Single" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5aabaa6c-bbd0-4a1f-94fc-eb7b4757e462">
+      <column name="SCHOOL_4_HOURS" not-null="False" precision="24" sql-type="real" p1:unicode="False" />
+    </property>
+    <property name="HOURSTYPE4" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="2c70a89a-ca72-4c0f-a8c0-49f89cf8aeb2">
+      <column name="HOURS_TYPE_4" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="UWCSCHOOL" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="30653785-4eb9-4898-847a-a8c244fb16c0">
+      <column name="UWC_SCHOOL" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="TITLEONESCHOOL" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4c051141-3488-4438-9f21-b2aeaaa67f6f">
+      <column name="TITLE_ONE_SCHOOL" not-null="False" sql-type="varchar(max)" p1:unicode="False" />
+    </property>
+    <property name="WAITLISTSTRONGNUMBER" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5536bd5d-9a35-4a61-9346-1376662e93ec">
+      <column name="WAITLIST_STRONG_NUMBER" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="LC" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="3148d53b-6070-4308-997c-a919e381c0cb">
+      <column name="LC" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="LCVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="49351813-8d9d-40f9-887f-c8f52ae0e1ff">
+      <column name="LC_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CS" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="18ad8f71-0a31-49d5-831b-f8828228e15b">
+      <column name="CS" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="CSVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="a023e08b-d4cd-4881-8449-be403ef78719">
+      <column name="CS_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="UB" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="daf09283-c880-4414-afa0-e353580285ec">
+      <column name="UB" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="UBVAL" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="a0a2b02b-3e42-4048-9499-f45cb57d1c6f">
+      <column name="UB_VAL" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="DG" type="String" p1:nullable="True" p1:ValidateMaxLength="256" p1:ValidateRequired="false" p1:Guid="c29665bc-09e2-4d9b-9e96-719e6c1a0697">
+      <column name="DG" not-null="False" length="256" sql-type="varchar" p1:unicode="False" />
+    </property>
+    <property name="HSR" type="Double" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="5f3ae8e6-3a4c-40b1-9dee-1682a00dee53">
+      <column name="HSR" not-null="False" precision="53" sql-type="float" p1:unicode="False" />
+    </property>
+    <property name="FOCUSSCHOOL" type="Int32" p1:ValidateRequired="true" p1:Guid="229c3392-e4fc-465b-ba28-baf2d6d6ebf0">
+      <column name="FOCUS_SCHOOL" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <associations>
+    <association name="List_Application" cardinality="OneToMany" p1:Guid="bf2cad46-7382-488b-a274-5b9207b0c3ce">
+      <end1 multiplicity="One" name="List" class="Application" relation-class="List" constrained="True" lazy="False" p1:Guid="69db2592-c08c-4a57-95c2-d0694bc80692">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Applications" class="List" relation-class="Application" lazy="False" p1:Guid="24ad675f-6e97-49e7-9a91-73e9a09f52f3">
+        <property name="ListId" />
+      </end2>
+    </association>
+    <association name="CustomAttribute_ListAttribute" cardinality="OneToMany" p1:Guid="d1c8e08e-0cd9-47b8-a8f8-0e5519bc301c">
+      <end1 multiplicity="One" name="CustomAttribute" class="ListAttribute" relation-class="CustomAttribute" constrained="True" lazy="False" p1:Guid="1153c038-31c1-4405-b5bf-c52b3b5aeb90">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ListAttributes" class="CustomAttribute" relation-class="ListAttribute" lazy="False" p1:Guid="1e9b21f7-4d38-4210-b3e0-138829a16f59">
+        <property name="AttributeId" />
+      </end2>
+    </association>
+    <association name="List_ListUserRole" cardinality="OneToMany" p1:Guid="dbf2f302-90ae-4312-ba0e-c06cbb41ebc9">
+      <end1 multiplicity="One" name="List" class="ListUserRole" relation-class="List" constrained="True" lazy="False" p1:Guid="d35d4bcd-53da-4860-a7c7-5102c8b984ea">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ListUserRoles" class="List" relation-class="ListUserRole" lazy="False" p1:Guid="93a2015a-b8f2-458c-a266-73cc267281f6">
+        <property name="ListId" />
+      </end2>
+    </association>
+    <association name="List_RefreshLog" cardinality="OneToMany" p1:Guid="6075e454-fb49-4cb5-b738-1b12a965f3cd">
+      <end1 multiplicity="One" name="List" class="RefreshLog" relation-class="List" constrained="True" lazy="False" p1:Guid="2c4b288a-f3c7-45f4-90a1-48c765fd9c32">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="RefreshLogs" class="List" relation-class="RefreshLog" lazy="False" p1:Guid="618ef3c4-3b8a-4471-9e13-b16422c9b2d4">
+        <property name="ListId" />
+      </end2>
+    </association>
+    <association name="ListRole_ListUserRole" cardinality="OneToMany" p1:Guid="e090edd2-60ce-4910-868d-9a646a30e84d">
+      <end1 multiplicity="One" name="ListRole" class="ListUserRole" relation-class="ListRole" constrained="True" lazy="False" p1:Guid="b72ecb29-b828-40b1-8b70-3c26366fea4c">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ListUserRoles" class="ListRole" relation-class="ListUserRole" lazy="False" p1:Guid="5b513632-edf7-4dfb-9e81-cf33f21f3475">
+        <property name="ListRoleId" />
+      </end2>
+    </association>
+    <association name="Role_UserRole" cardinality="OneToMany" p1:Guid="57597321-efed-493a-99e7-fbadbe0074ca">
+      <end1 multiplicity="One" name="Role" class="UserRole" relation-class="Role" constrained="True" lazy="False" p1:Guid="fd9fd356-071b-4c1e-9f52-b105df613774">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UserRoles" class="Role" relation-class="UserRole" lazy="False" p1:Guid="2cfc0e80-ec81-45f0-b4d5-49fa700cc89a">
+        <property name="RoleId" />
+      </end2>
+    </association>
+    <association name="Protection_Application" cardinality="OneToMany" p1:Guid="d37bee49-e62a-447b-ac8d-b18434b69dc6">
+      <end1 multiplicity="ZeroOrOne" name="Protection" class="Application" relation-class="Protection" constrained="True" lazy="False" p1:Guid="d75d0c71-c4d8-4dff-a01e-2f1b5604e22b">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Applications" class="Protection" relation-class="Application" generate="False" lazy="False" p1:Guid="08846ba6-8c6d-4f76-8255-d427bdbf2da8">
+        <property name="ProtectionId" />
+      </end2>
+    </association>
+    <association name="DropDownType_DropDown" cardinality="OneToMany" p1:Guid="7a7ed7c0-4302-4881-89a8-7bf6f3e21152">
+      <end1 multiplicity="One" name="DropDownType" class="DropDown" relation-class="DropDownType" constrained="True" lazy="False" p1:Guid="422de0e1-cda1-47e9-8e3d-b39b50a25976">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="DropDowns" class="DropDownType" relation-class="DropDown" lazy="False" p1:Guid="c268792d-002f-43de-9e3b-0d3a30bd2fed">
+        <property name="TypeId" />
+      </end2>
+    </association>
+    <association name="Application_ListAttribute" cardinality="OneToMany" p1:Guid="0e9d139a-ef42-4555-b22c-8ac7282b8390">
+      <end1 multiplicity="One" name="Application" class="ListAttribute" relation-class="Application" constrained="True" lazy="False" p1:Guid="df3ef0ce-4944-4765-8d74-9682f5a1ecd3">
+        <property name="ApplicationId" />
+        <property name="ListId" />
+        <property name="PersonId" />
+      </end1>
+      <end2 multiplicity="Many" name="ListAttributes" class="Application" relation-class="ListAttribute" lazy="False" p1:Guid="3673deba-2e64-458f-a1b8-8609fcbca4b6">
+        <property name="ApplicationId" />
+        <property name="ListId" />
+        <property name="PersonId" />
+      </end2>
+    </association>
+    <association name="RefreshState_RefreshLog" cardinality="OneToMany" p1:Guid="2e9349fb-8c7a-41f2-8fb6-d11207c15f9c">
+      <end1 multiplicity="One" name="RefreshState" class="RefreshLog" relation-class="RefreshState" constrained="True" lazy="False" p1:Guid="1ab93bf6-0759-4b1e-8c80-98c2a3323f26">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="RefreshLogs" class="RefreshState" relation-class="RefreshLog" lazy="False" p1:Guid="f4e81540-9405-4f18-8ac4-fe6962c14521">
+        <property name="RefreshStateId" />
+      </end2>
+    </association>
+    <association name="HistoricalTargetType_HistoricalTarget" cardinality="OneToMany" p1:Guid="b65c36ff-a5d8-4342-99fe-0cd7b3e5cea2">
+      <end1 multiplicity="One" name="HistoricalTargetType" class="HistoricalTarget" relation-class="HistoricalTargetType" constrained="True" lazy="False" p1:Guid="f76d5a02-9660-4a73-b7fb-6e84d94a5ff2">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="HistoricalTargets" class="HistoricalTargetType" relation-class="HistoricalTarget" lazy="False" p1:Guid="22c40464-56dc-4ef8-957e-118a39fa880f">
+        <property name="HistoricalTargetTypeId" />
+      </end2>
+    </association>
+    <association name="User_CustomAttribute" cardinality="OneToMany" p1:Guid="0a3de357-4ea7-4a71-8e7b-81e9623a1570">
+      <end1 multiplicity="ZeroOrOne" name="User" class="CustomAttribute" relation-class="User" constrained="True" lazy="False" p1:Guid="970c98d5-1337-44f2-b244-4349d924b161">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CustomAttributes" class="User" relation-class="CustomAttribute" lazy="False" p1:Guid="cc645a9b-80fd-4949-9328-71eef623bc7a">
+        <property name="CreatedByUserId" />
+      </end2>
+    </association>
+    <association name="User_ListUserRole" cardinality="OneToMany" p1:Guid="70115601-a297-4fe2-9802-a643e6109a7b">
+      <end1 multiplicity="One" name="User" class="ListUserRole" relation-class="User" constrained="True" lazy="False" p1:Guid="955ef3bf-cb12-4455-b471-188c0d96924c">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ListUserRoles" class="User" relation-class="ListUserRole" lazy="False" p1:Guid="ee7af7ed-56eb-4c97-b687-cabed78b3c2c">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_RefreshLog" cardinality="OneToMany" p1:Guid="3b0c4f4b-66ba-445f-b050-eea5733b88c7">
+      <end1 multiplicity="One" name="User" class="RefreshLog" relation-class="User" constrained="True" lazy="False" p1:Guid="78f3c538-bb74-4c1f-900c-0c4392a155c2">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="RefreshLogs" class="User" relation-class="RefreshLog" lazy="False" p1:Guid="37c33ea4-2d5a-4291-abef-5f194f4dfba6">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_UserRole" cardinality="OneToMany" p1:Guid="a99f07f2-c249-45b6-bc1c-dcaaf00b1d15">
+      <end1 multiplicity="One" name="User" class="UserRole" relation-class="User" constrained="True" lazy="False" p1:Guid="dc60b0a1-cb3e-41b1-8886-c99afb9cb5a3">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UserRoles" class="User" relation-class="UserRole" lazy="False" p1:Guid="b31cfaea-36f8-4c6e-8dee-215e9be06a6f">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_SavedObject" cardinality="OneToMany" p1:Guid="12247342-6fe1-49ba-b1da-22fcf37ca91a">
+      <end1 multiplicity="One" name="User" class="SavedObject" relation-class="User" constrained="True" lazy="False" p1:Guid="95367a5b-5cb7-49aa-afa9-4aab1dd3ed86">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="SavedObjects" class="User" relation-class="SavedObject" lazy="False" p1:Guid="3c81a18f-5cb5-43f6-9162-e39b67690745">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_ImportAttrib" cardinality="OneToMany" p1:Guid="220e92b2-767c-4395-8368-ec4995ff57bf">
+      <end1 multiplicity="One" name="User" class="ImportAttrib" relation-class="User" constrained="True" lazy="False" p1:Guid="00523fc2-88f8-4d97-927f-76b8bd53e62c">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ImportAttribs" class="User" relation-class="ImportAttrib" lazy="False" p1:Guid="fbc8b5d5-99a3-4248-b74f-808fba8f11a3">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="Application_AuditLog" cardinality="OneToMany" p1:Guid="f9f82a22-5fd4-435a-b935-09ae75566665">
+      <end1 multiplicity="One" name="Application" class="AuditLog" relation-class="Application" constrained="True" lazy="False" p1:Guid="79e27d6c-6ce7-4dd9-8237-0619516817b4">
+        <property name="ApplicationId" />
+        <property name="ListId" />
+        <property name="PersonId" />
+      </end1>
+      <end2 multiplicity="Many" name="AuditLog" class="Application" relation-class="AuditLog" lazy="False" p1:Guid="8c25ad36-e2ff-4259-819e-7dff05f9a8b1">
+        <property name="ApplicationId" />
+        <property name="ListId" />
+        <property name="PersonId" />
+      </end2>
+    </association>
+    <association name="Protection_AuditLog" cardinality="OneToMany" p1:Guid="06942e92-66c7-461b-b648-9dae0f308ced">
+      <end1 multiplicity="ZeroOrOne" name="Protection" class="AuditLog" relation-class="Protection" constrained="True" lazy="False" p1:Guid="cf555a69-8761-4cd3-9b0b-1bca0898d38f">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="AuditLogs" class="Protection" relation-class="AuditLog" lazy="False" p1:Guid="cdb7c5a2-0375-463a-896c-61d075b5a255">
+        <property name="ProtectionId" />
+      </end2>
+    </association>
+    <association name="CustomAttribute_AuditLog" cardinality="OneToMany" p1:Guid="038e25de-1ce2-4d95-8ed9-f19024a8906f">
+      <end1 multiplicity="ZeroOrOne" name="CustomAttribute" class="AuditLog" relation-class="CustomAttribute" constrained="True" lazy="False" p1:Guid="e6de4db3-72a3-4a27-bb56-a19f902f8ed7">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="AuditLogs" class="CustomAttribute" relation-class="AuditLog" lazy="False" p1:Guid="312c4f25-f541-4873-adaa-cce18901b98f">
+        <property name="CustomAttributeId" />
+      </end2>
+    </association>
+    <association name="List_FilterAuditLog" cardinality="OneToMany" p1:Guid="b8c0ba98-0e70-4215-a203-88c1cfa62ffc">
+      <end1 multiplicity="One" name="List" class="FilterAuditLog" relation-class="List" constrained="True" lazy="False" p1:Guid="7800615e-e4b1-46af-9e0c-7d0d464442c9">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="FilterAuditLogs" class="List" relation-class="FilterAuditLog" lazy="False" p1:Guid="b1d6a554-fb67-42b2-b57d-7d2f9310e1dc">
+        <property name="ListId" />
+      </end2>
+    </association>
+    <association name="User_FilterAuditLog" cardinality="OneToMany" p1:Guid="ad5fd6e7-27fb-47f9-98f2-ae7dcd0c494d">
+      <end1 multiplicity="One" name="User" class="FilterAuditLog" relation-class="User" constrained="True" lazy="False" p1:Guid="c41f56ac-b8a0-48d4-b070-0e53c245810c">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="FilterAuditLogs" class="User" relation-class="FilterAuditLog" lazy="False" p1:Guid="1692a37a-ab30-4787-9227-783cc6e612ec">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="ImportState_ImportAttrib" cardinality="OneToMany" p1:Guid="e52b100d-9ef6-41eb-bf5e-bb8e520c7229">
+      <end1 multiplicity="One" name="ImportState" class="ImportAttrib" relation-class="ImportState" constrained="True" lazy="False" p1:Guid="0af7887c-ede0-4b32-ae71-9c6d5151934f">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ImportAttribs" class="ImportState" relation-class="ImportAttrib" lazy="False" p1:Guid="e90fa4a5-7e8e-4724-a0de-c11473611133">
+        <property name="ImportStateId" />
+      </end2>
+    </association>
+    <association name="User_Queue" cardinality="OneToMany" p1:Guid="c54eb6f7-ca1e-4422-9a88-0904062c3759">
+      <end1 multiplicity="One" name="User" class="Queue" relation-class="User" constrained="True" lazy="False" p1:Guid="5a71d0e0-8364-4fa3-b52a-daeca0146409">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Queues" class="User" relation-class="Queue" lazy="False" p1:Guid="62d8f575-0ba9-4fba-834b-759ba0a00c9c">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="List_Queue" cardinality="OneToMany" p1:Guid="55eabcb5-fce1-47df-815d-8a9d37fe61f9">
+      <end1 multiplicity="One" name="List" class="Queue" relation-class="List" constrained="True" lazy="False" p1:Guid="f37a8114-56c5-4d9d-b476-30f269796500">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Queues" class="List" relation-class="Queue" lazy="False" p1:Guid="52ec5b14-38c4-440d-bff6-b60e76b78685">
+        <property name="ListId" />
+      </end2>
+    </association>
+    <association name="Protection_Queue" cardinality="OneToMany" p1:Guid="4428b803-0fc4-469a-876c-ca4e5fdfdcdb">
+      <end1 multiplicity="ZeroOrOne" name="Protection" class="Queue" relation-class="Protection" constrained="True" lazy="False" p1:Guid="cef05d70-756e-4e1f-a04d-0bc648a1ce92">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Queues" class="Protection" relation-class="Queue" lazy="False" p1:Guid="566525ca-28cd-4976-b50d-f98865ffc6c9">
+        <property name="ProtectionId" />
+      </end2>
+    </association>
+    <association name="CustomAttribute_Queue" cardinality="OneToMany" p1:Guid="284274be-69b0-4923-b5f5-9d6ba47fc717">
+      <end1 multiplicity="ZeroOrOne" name="CustomAttribute" class="Queue" relation-class="CustomAttribute" constrained="True" lazy="False" p1:Guid="2c9ba569-4116-4b23-949a-df3a263ad1cd">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Queues" class="CustomAttribute" relation-class="Queue" lazy="False" p1:Guid="d6180754-5c25-4322-8861-297b25a84825">
+        <property name="CustomAttributeId" />
+      </end2>
+    </association>
+    <association name="QueueType_Queue" cardinality="OneToMany" p1:Guid="96b319eb-2a05-43fe-bdc6-966265b8e2bd">
+      <end1 multiplicity="One" name="QueueType" class="Queue" relation-class="QueueType" constrained="True" lazy="False" p1:Guid="4c822705-2b07-4948-a83c-bc300e4a2f3e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Queues" class="QueueType" relation-class="Queue" lazy="False" p1:Guid="27dcd0f1-d2b7-4489-a7bf-52c287a511e5">
+        <property name="QueueTypeId" />
+      </end2>
+    </association>
+  </associations>
+  <method name="SpApplicationSearch" p1:procedure="dbo.spApplicationSearch" p1:Guid="eac99234-446e-4bfc-9e9f-4b60927fc2a4">
+    <return class="Application" />
+    <parameter name="ListId" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="PsAdmApplNbr" type="String" sql-type="varchar" length="16" />
+    <parameter name="Career" type="String" sql-type="varchar" length="16" />
+    <parameter name="RoundKey" type="String" sql-type="varchar" length="16" />
+    <parameter name="AdmitType" type="String" sql-type="varchar" length="32" />
+    <parameter name="ApplicationAdmitTerm" type="String" sql-type="varchar" length="16" />
+    <parameter name="SatAdmissionsScore" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="TestType" type="String" sql-type="varchar" length="16" />
+    <parameter name="TestUpdate" type="DateTime" sql-type="datetime" />
+    <parameter name="SatHighestVerifiedMaxCriticalReading" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="SatHighestVerifiedMaxMath" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="SatrAdmissionsScore" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="ActHighestVerifiedTotalEnglish" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="ActHighestVerifiedTotalMath" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="RIC" type="Decimal" sql-type="decimal" precision="10" scale="7" />
+    <parameter name="ERIC" type="Decimal" sql-type="decimal" precision="10" scale="7" />
+    <parameter name="DecisionUpdate" type="DateTime" sql-type="datetime" />
+    <parameter name="DecisionConfirmedExport3Code" type="String" sql-type="varchar" length="16" />
+    <parameter name="DecisionConfirmedCode" type="String" sql-type="varchar" length="16" />
+    <parameter name="DecisionConfirmedReasonExportKey" type="String" sql-type="varchar" length="16" />
+    <parameter name="SchoolUpdate" type="DateTime" sql-type="datetime" />
+    <parameter name="HsgpaCalculated" type="Decimal" sql-type="decimal" precision="10" scale="7" />
+    <parameter name="EvaluationStatus" type="String" sql-type="varchar" length="16" />
+    <parameter name="EvalStatusDescr" type="String" sql-type="varchar" length="64" />
+    <parameter name="Ar" type="String" sql-type="varchar" length="8" />
+    <parameter name="ArVal" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="Pr" type="String" sql-type="varchar" length="8" />
+    <parameter name="PrVal" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="Sf" type="String" sql-type="varchar" length="8" />
+    <parameter name="SfVal" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="Ovr" type="String" sql-type="varchar" length="8" />
+    <parameter name="OvrVal" type="Int32" sql-type="int" precision="10" scale="0" />
+    <parameter name="OuaGeoMarket" type="String" sql-type="varchar" length="8" />
+    <parameter name="StaffAssigned" type="String" sql-type="varchar" length="128" />
+    <parameter name="EtsCode" type="String" sql-type="varchar" length="16" />
+    <parameter name="HsState" type="String" sql-type="varchar" length="128" />
+    <parameter name="HsName" type="String" sql-type="varchar" length="256" />
+    <parameter name="HsRating" type="String" sql-type="varchar" length="4" />
+    <parameter name="SchoolOfChoice1" type="String" sql-type="varchar" length="16" />
+    <parameter name="SchoolOfChoice1Descr" type="String" sql-type="varchar" length="256" />
+    <parameter name="School1Major1" type="String" sql-type="varchar" length="32" />
+    <parameter name="School1Major1Descr" type="String" sql-type="varchar" length="256" />
+    <parameter name="GpcMajor" type="String" sql-type="varchar" length="32" />
+    <parameter name="FinancialAidInterest" type="Boolean" sql-type="bit" />
+    <parameter name="FacStaff" type="String" sql-type="varchar" length="32" />
+    <parameter name="Legacy" type="String" sql-type="varchar" length="32" />
+    <parameter name="GiaStatus" type="String" sql-type="varchar" length="64" />
+    <parameter name="FirstGen" type="Boolean" sql-type="bit" />
+    <parameter name="Posse" type="String" sql-type="varchar" length="16" />
+    <parameter name="ChicagoScholar" type="String" sql-type="varchar" length="64" />
+    <parameter name="QuestBridge" type="String" sql-type="varchar" length="8" />
+    <parameter name="Mosaic" type="Boolean" sql-type="bit" />
+    <parameter name="WlStrong" type="String" sql-type="varchar" length="64" />
+    <parameter name="WaitlistChallenge1" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge2" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge3" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge4" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge5" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge6" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge7" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge8" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistChallenge9" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistPreOffer" type="Boolean" sql-type="bit" />
+    <parameter name="WaitlistPreOfferResponse" type="Boolean" sql-type="bit" />
+    <parameter name="OriginalRoundKey" type="String" sql-type="varchar" length="16" />
+  </method>
+  <method name="SpCheckDropDown" p1:procedure="dbo.spCheckDropDown" p1:Guid="49f2eb9c-f6e4-424a-b472-156ef1140d44" />
+  <method name="SpRemoveProtectionsFromList" p1:procedure="dbo.spRemoveProtectionsFromList" p1:Guid="721d6ff4-5f0a-44fb-9449-82dd4d7fe5c1">
+    <parameter name="ListId" type="Int32" sql-type="int" precision="10" scale="0" />
+  </method>
+  <method name="SpDeleteList" p1:procedure="dbo.spDeleteList" p1:Guid="603fe10f-800a-4972-aec1-602e40b67f13">
+    <parameter name="ListId" type="Int32" sql-type="int" precision="10" scale="0" />
+  </method>
+</efcore>

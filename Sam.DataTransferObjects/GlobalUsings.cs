@@ -1,0 +1,11 @@
+﻿global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using System.ComponentModel.DataAnnotations;
+global using Newtonsoft.Json;
+global using Sam.DataModel;
+global using Sam.Common.Global;
+global using Sam.Common.Global.Enums;
+global using Sam.Common.Global.Models;

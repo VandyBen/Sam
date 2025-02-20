@@ -1,0 +1,16 @@
+﻿global using Sam.DataTransferObjects;
+global using Sam.Common.Global;
+global using Sam.Common.Global.Enums;
+global using Sam.Common.Global.Models;
+global using Sam.DataModel.FilterModel;
+global using Sam.DataModel.FilterModel.CriteriaDefinition;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaHighSchool;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaOther;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaStudent;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaRating;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaStatus;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaUniversity;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaTestScore;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaTransferStudent;
+global using Sam.DataModel.FilterModel.CriteriaDefinition.CriteriaWaitList;
+global using Sam.DataModel.FilterModel.ListsDefinition;
