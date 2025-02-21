@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sam.DataModel.FilterModel",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sam.Common.Global", "Sam.Common.Global\Sam.Common.Global.csproj", "{49E4C8AC-7FB0-4174-A2DF-652E741EDC36}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public Layers", "Public Layers", "{5E6EA9B7-73E6-454D-8721-0C0FA1DAFAEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sam.Web.App", "Sam.Web.App\Sam.Web.App.csproj", "{4105D10E-63BA-4F09-A67A-FFEB2418910D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{49E4C8AC-7FB0-4174-A2DF-652E741EDC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E4C8AC-7FB0-4174-A2DF-652E741EDC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E4C8AC-7FB0-4174-A2DF-652E741EDC36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4105D10E-63BA-4F09-A67A-FFEB2418910D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4105D10E-63BA-4F09-A67A-FFEB2418910D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4105D10E-63BA-4F09-A67A-FFEB2418910D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4105D10E-63BA-4F09-A67A-FFEB2418910D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{D3108C6F-792D-424E-913C-C21DD882A8F2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{E2E9E253-F4FC-4206-9F89-DAF3967F6976} = {701D4B86-0F4A-4C74-9B38-AF0263ED4405}
 		{627E1FB4-DC7D-4196-9472-AD105C7159A7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4105D10E-63BA-4F09-A67A-FFEB2418910D} = {5E6EA9B7-73E6-454D-8721-0C0FA1DAFAEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F026CF39-62A8-4677-A4DF-69B8DB471FBC}

@@ -1,0 +1,49 @@
+﻿@using System.Globalization
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+
+<div>
+    <label>
+        Select Locale:
+        <TelerikDropDownList Data="@SupportedCultures" 
+                             @bind-Value="@SelectedCulture" 
+                             TextField="@nameof(CultureInfo.NativeName)"
+                             ValueField="@nameof(CultureInfo.Name)"
+                             @bind-Value:after="@ApplySelectedCulture"
+                             Width="200px">
+            <DropDownListSettings>
+                <DropDownListPopupSettings Height="auto" />
+            </DropDownListSettings>
+        </TelerikDropDownList>
+    </label>
+</div>
+
+@code {
+    private readonly CultureInfo[] SupportedCultures = new[]
+    {
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+        new CultureInfo("es-ES"),
+        new CultureInfo("bg-BG"),
+    };
+
+    private string SelectedCulture { get; set; } = CultureInfo.CurrentCulture.Name;
+
+    private void ApplySelectedCulture()
+    {
+        if (CultureInfo.CurrentCulture.Name != SelectedCulture)
+        {
+            var uri = new Uri(Navigation.Uri)
+                .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+            var cultureEscaped = Uri.EscapeDataString(SelectedCulture);
+            var uriEscaped = Uri.EscapeDataString(uri);
+
+            var culture = CultureInfo.GetCultureInfo(SelectedCulture);
+            CultureInfo.CurrentCulture = CultureInfo.CurrentUICulture = culture;
+
+            Navigation.NavigateTo(
+                $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
+                forceLoad: true);
+        }
+    }
+}
