@@ -9,5 +9,10 @@
 	<ItemGroup>
 		<PackageReference Include="Telerik.UI.for.Blazor" Version="8.0.0" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Sam.Common.Global\Sam.Common.Global.csproj" />
+	  <ProjectReference Include="..\Sam.DataModel.FilterModel\Sam.DataModel.FilterModel.csproj" />
+	  <ProjectReference Include="..\Sam.DataTransferObjects\Sam.DataTransferObjects.csproj" />
+	</ItemGroup>
 
 </Project>

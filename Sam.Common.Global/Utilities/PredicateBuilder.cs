@@ -1,4 +1,4 @@
-﻿namespace Sam.Logic.Common.Models;
+﻿namespace Sam.Common.Global.Utilities;
 
 public static class PredicateBuilder
 {
